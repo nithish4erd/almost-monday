@@ -542,8 +542,19 @@ function renderMissions(){let d=dayData(),p=Object.values(d.primary).filter(Bool
 let installPromptEvent=null, notificationLoop=null;
 function updatePermissionStatus(){let el=document.getElementById("permissionStatus");if(el)el.textContent=("Notification" in window)?"Current permission: "+Notification.permission:"This browser does not support web notifications."}
 async function enableNotifications(){if(!("Notification" in window)){notify("This browser does not support notifications.");return}if(!window.isSecureContext){notify("Notifications need a secure HTTPS website. A local ZIP cannot request permission.");updatePermissionStatus();return}let p=await Notification.requestPermission();updatePermissionStatus();if(p==="granted"){sendPhoneNotification("ALMOST MONDAY is ready","Your campus story alerts are enabled. 🔔");notify("Phone notifications enabled for this website.")}else notify("Notification permission was not granted.");}
-function sendPhoneNotification(title,body){if("Notification" in window&&Notification.permission==="granted"){try{new Notification(title,{body,icon:"icon.svg",tag:"almost-monday-"+todayISO()})}catch(e){}}}
-function sendTestNotification(){if(!window.isSecureContext){notify("Host the website on HTTPS first to test phone notifications.");return}if(!("Notification" in window)||Notification.permission!=="granted"){enableNotifications();return}new Notification("ALMOST MONDAY",{body:"Test alert: your campus story is ready when you are. 👀",icon:"icon.svg"});}
+async function sendPhoneNotification(title,body){
+  if(!("Notification" in window)||Notification.permission!=="granted")return;
+  try{
+    if(!("serviceWorker" in navigator))throw new Error("Service Worker unavailable");
+    const reg=await navigator.serviceWorker.ready;
+    await reg.showNotification(title,{body,icon:"./icon-192.png",badge:"./icon-192.png",tag:"almost-monday-"+todayISO(),renotify:true});
+  }catch(e){console.error("Notification failed:",e);notify("Notification could not be displayed. Check Chrome site notification settings.");}
+}
+async function sendTestNotification(){
+  if(!window.isSecureContext){notify("This website needs HTTPS hosting. GitHub Pages should already provide HTTPS.");return;}
+  if(!( "Notification" in window)||Notification.permission!=="granted"){await enableNotifications();return;}
+  await sendPhoneNotification("ALMOST MONDAY", "Test alert: your campus story is ready when you are. 👀");
+}
 function renderNotificationSettings(){let box=document.getElementById("notificationSettings");if(!box)return;box.innerHTML=S.notifications.settings.map((x,i)=>`<div class="setting-row"><label><input type="checkbox" ${x.enabled?"checked":""} onchange="S.notifications.settings[${i}].enabled=this.checked;persist()"> <b>${x.label}</b></label><input type="time" value="${x.time}" onchange="S.notifications.settings[${i}].time=this.value;persist()"></div>`).join("");}
 function saveNotificationSettings(){persist();renderNotificationSettings();notify("Notification preferences saved.");}
 function notificationTick(){if(!("Notification" in window)||Notification.permission!=="granted")return;let now=new Date(),hm=now.toTimeString().slice(0,5),day=todayISO();S.notifications.settings.forEach(x=>{let key=day+"_"+x.id;if(x.enabled&&x.time===hm&&!S.notifications.lastSent[key]){let body=x.msg;if(x.id==="tech")body=TECH_BITS[(dayNo()-1)%TECH_BITS.length];if(x.id==="cliff")body="Tomorrow: a message reaches the gang after lights-out. What is Rahul not telling them? 👀";sendPhoneNotification("ALMOST MONDAY · "+x.label,body);S.notifications.lastSent[key]=true;persist();}})}
