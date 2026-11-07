@@ -1,7 +1,7 @@
 {
-  "name": "ALMOST MONDAY",
-  "short_name": "Almost Monday",
-  "description": "365 days. One life. Your story.",
+  "name": "A COLLEGE OF 1000 DAYS",
+  "short_name": "1000 Days",
+  "description": "One thousand days of real-life growth, campus friendships, and story chapters.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
