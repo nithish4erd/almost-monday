@@ -118,11 +118,100 @@ footer{color:#e7d8c5}
 
 .v16-message{padding:12px;border:1px solid var(--line);border-radius:13px;margin:9px 0;background:#fff}.v16-message.unread{border-left:4px solid var(--green)}.v16-message button{margin-top:8px}.v16-chat{padding:10px 12px;border-radius:14px;margin:8px 0;max-width:88%;background:#f3eee5}.v16-chat.me{margin-left:auto;background:#e8f1e9}.v16-event{border:1px solid var(--line);border-radius:14px;padding:13px;margin:10px 0;background:#fff}.v16-event.done{opacity:.65}.v16-cardbtn{border:1px solid var(--line);background:#fff;border-radius:12px;padding:15px;font-weight:900;min-height:60px}.v16-cardbtn:disabled{opacity:.4}.v16-entry{border-bottom:1px solid var(--line);padding:10px 0}.v16-entry small{color:var(--muted)}.v16-entry p{margin:5px 0}.v16-chip{display:inline-block;background:var(--violet2);color:var(--violet);border-radius:30px;padding:4px 9px;font-size:11px;font-weight:800;margin:3px}
 .abstract-card{max-width:1000px;margin:0 auto;line-height:1.75}.abstract-card p{margin:16px 0;text-align:justify}.abstract-card h2{margin:0}
-</style></head><body>
+</style>
+<style>
+.a1000-focus-card{border:1px solid #dcd5f6;background:linear-gradient(135deg,#fffdf9,#f1efff)}
+.a1000-focus-card input:focus{outline:2px solid #8b80e8;outline-offset:1px}
+@media(max-width:700px){.top{align-items:flex-start;flex-direction:column}.nav{flex-wrap:nowrap;max-width:100%;overflow-x:auto;padding-bottom:5px}.nav button{white-space:nowrap}.a1000-focus-card .row{align-items:flex-start}}
+@media(display-mode:standalone){body{padding-bottom:env(safe-area-inset-bottom)}.top{padding-top:max(15px,env(safe-area-inset-top))}}
+</style>
+
+<style>
+.a1000-productivity-hero{background:linear-gradient(125deg,#263d36 0%,#3d554b 52%,#6259a8 100%);color:white;border-radius:18px}
+.a1000-productivity-hero p{color:#e3e7e3}.a1000-productivity-hero .pill{background:#ffffff20;color:#fff;border-color:#ffffff30}
+.pc-plan-card{background:linear-gradient(130deg,#fffdf8,#f0efff);border:1px solid #e1dcf7}
+.pc-task{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+.pc-task:last-child{border-bottom:0}.pc-task-main{flex:1;min-width:0}.pc-task-title{font-weight:800;overflow-wrap:anywhere}.pc-task-meta{font-size:12px;color:var(--muted)}
+.pc-task.done .pc-task-title{text-decoration:line-through;opacity:.6}.pc-task button{padding:7px 10px}
+.pc-priority{display:inline-block;border-radius:99px;padding:2px 8px;font-size:11px;background:#f3eee2}
+@media(max-width:650px){.a1000-productivity-hero{display:block}.a1000-productivity-hero .heroRight{margin-top:16px}.pc-task{gap:8px}.pc-task button{font-size:12px}}
+</style>
+
+<style>
+.a1000-habit-hero{background:linear-gradient(125deg,#263d36,#45685a 58%,#6659a8);color:white;border-radius:18px}
+.a1000-habit-hero p{color:#e5eee8}
+.ah-days{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}
+.ah-days label{border:1px solid var(--line);border-radius:10px;padding:7px 9px;font-size:12px}
+.ah-habit{padding:12px 0;border-bottom:1px solid var(--line)}
+.ah-habit:last-child{border-bottom:0}.ah-habit-title{font-weight:800}
+.ah-meta{font-size:12px;color:var(--muted);margin-top:3px}
+.ah-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.ah-actions button{padding:7px 10px;font-size:12px}
+.ah-heatmap{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.ah-cell{aspect-ratio:1;border-radius:6px;background:#eeeae3;display:grid;place-items:center;font-size:10px;color:#686477}
+.ah-cell.low{background:#d8e7dd}.ah-cell.mid{background:#9dc7aa}.ah-cell.high{background:#3d8060;color:white}
+.ah-cell.today{outline:2px solid #6659d6;outline-offset:2px}
+@media(max-width:650px){.a1000-habit-hero{display:block}.a1000-habit-hero .heroRight{margin-top:14px}.ah-heatmap{gap:4px}}
+</style>
+
+<style>
+.a1000-life-hero{background:linear-gradient(125deg,#263d36,#476b5b 55%,#6659a8);color:#fff;border-radius:18px}
+.a1000-life-hero p{color:#e7eee9}
+.life2-dim{padding:10px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.life2-dim input{width:100%;accent-color:#6659d6}.life2-entry{padding:10px 0;border-bottom:1px solid var(--line)}.life2-entry:last-child{border:0}
+@media(max-width:650px){.a1000-life-hero{display:block}.a1000-life-hero .heroRight{margin-top:14px}}
+</style>
+
+<style>
+.v28-arcade-hero{background:linear-gradient(125deg,#29294d,#5552a1 55%,#287d78);color:white;border-radius:18px}.v28-arcade-hero p{color:#ecebff}
+.v28-arcade-tabs{display:flex;gap:7px;overflow-x:auto;padding:12px 0;scrollbar-width:thin}.v28-arcade-tabs .btn{white-space:nowrap;flex:0 0 auto}.v28-tab.active{background:#5754a5;color:#fff;border-color:#5754a5}
+.v28-game{margin:6px 0 14px;min-height:300px}.v28-game[hidden]{display:none!important}
+.v28-answer{display:block;width:100%;text-align:left;padding:12px;margin:7px 0;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--text);cursor:pointer}.v28-answer:disabled{opacity:.8;cursor:default}.v28-answer.correct{border-color:#29976a;background:#e7f7ef;color:#174d36}.v28-answer.wrong{border-color:#c66;background:#fff0f0;color:#762b2b}
+.v28-scramble{font-size:clamp(28px,7vw,42px);font-weight:850;letter-spacing:.18em;text-align:center;padding:24px;background:var(--paper);border:1px dashed var(--line);border-radius:14px;margin:14px 0}.v28-project-prompt{padding:14px;border-radius:12px;background:var(--paper);margin:12px 0;font-weight:650}.v28-game .notice{min-height:38px}
+@media(max-width:650px){.v28-arcade-hero{display:block}.v28-arcade-hero .heroRight{margin-top:14px}.v28-arcade-tabs .btn{font-size:12px;padding:9px}}
+</style>
+
+<style>
+.v29-campaign-card{border:1px solid var(--line)}.c29-roadmap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.c29-phase{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--paper)}.c29-phase b{display:block;margin-bottom:5px}.c29-week{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:9px 0;border-bottom:1px solid var(--line)}.c29-week small{color:var(--muted)}.c29-action{padding:10px 0;border-bottom:1px solid var(--line)}.c29-action label{display:flex;gap:8px;align-items:flex-start}.c29-action small{display:block;color:var(--muted);margin-left:25px}
+@media(max-width:650px){.c29-roadmap{grid-template-columns:1fr}.v29-campaign-card .grid2{grid-template-columns:1fr}}
+</style>
+
+<script>
+/* v30 Fresh Start: clear only A COLLEGE OF 1000 DAYS app saves once. */
+(function(){
+ const marker='a1000FreshStart_v30_completed';
+ try{
+  if(localStorage.getItem(marker)==='yes')return;
+  [
+   'almostMondayV2',
+   'almostMondayLifeOS',
+   'almostMondayStep2_v18',
+   'almostMondayV16',
+   'aCollege1000Growth_v21',
+   'a1000PwaProductivity_v24',
+   'a1000ProductivityCenter_v25',
+   'a1000AdvancedHabits_v26',
+   'a1000LifeOS_v27',
+   'a1000CampusArcade_v28'
+  ].forEach(k=>localStorage.removeItem(k));
+  localStorage.setItem(marker,'yes');
+ }catch(e){console.warn('Fresh-start reset could not access local storage.',e);}
+})();
+</script>
+
+</head><body>
 <header class="top"><div class="logo">A COLLEGE OF 1000 DAYS<small>THE CAMPUS CHRONICLES · 1000 DAYS · ONE LIFE</small></div><nav class="nav"><button class="active" data-view="today">Today</button><button data-view="episode">Episode</button><button data-view="missions">Missions</button><button data-view="character">Character</button><button data-view="friendships">Friendships</button><button data-view="scrapbook">Scrapbook</button><button data-view="festival">Festival</button><button data-view="campus">Campus World</button><button data-view="productivity">Productivity Center</button><button data-view="lifeos">My Life OS</button><button data-view="phone">Phone</button><button data-view="events">Campus Events</button><button data-view="arcade">Arcade</button><button data-view="habits">Habit Lab</button><button data-view="missioncontrol">Mission Control</button><button data-view="campaign">12-Week Campaign</button><button data-view="vault">Knowledge Vault</button><button data-view="year">1000 Days</button><button data-view="settings">Alerts & App</button><button data-view="abstract">Project Abstract</button></nav></header>
 <main>
 <section id="today" class="view active">
 <div class="hero"><div><div class="eyebrow" id="arcName">ARC 01 · FIRST BELL</div><h1 id="greeting">Your story is waiting.</h1><p id="heroLine">Ash’s college story, real-life habits, friendships, awkward romance, and small wins. Build a life you actually enjoy living.</p><div class="row"><button class="btn dark" onclick="go('episode')">Continue today's episode →</button><span class="eyebrow" id="dateLabel"></span></div></div><div class="heroRight"><div class="heroStat"><b id="dayLabel">01</b><span>Story day</span></div><div class="heroStat"><b id="levelLabel">Lv. 1</b><span>Character level</span></div><div class="heroStat"><b id="taskLabel">0/6</b><span>Primary tasks</span></div><div class="heroStat"><b id="xpLabel">0 XP</b><span>Total experience</span></div></div></div>
+
+<div class="card a1000-focus-card" style="margin:14px 0">
+ <div class="row"><div><span class="kicker">ASH'S CAMPUS PLANNER</span><h2 style="margin:4px 0">Today's Focus</h2></div><span class="pill" id="a1000-mode-pill">Standard mode</span></div>
+ <p class="muted">Choose one meaningful frog task. Keep the plan small enough to finish without sacrificing sleep.</p>
+ <div class="row" style="flex-wrap:wrap"><input id="a1000-frog-input" aria-label="Today's most important task" placeholder="My one important task today…" style="flex:1;min-width:190px;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--paper)"><button class="btn" onclick="a1000SaveFrog()">Save task</button></div>
+ <div class="row" style="margin-top:10px;flex-wrap:wrap"><label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="a1000-frog-done" onchange="a1000ToggleFrog(this.checked)"> <span>My frog task is complete</span></label><span class="muted" id="a1000-frog-status"></span></div>
+ <div class="row" style="margin-top:12px;flex-wrap:wrap"><button class="btn alt" onclick="go('settings')">App, backup & wellbeing</button><button class="btn alt" onclick="a1000SetOffWeek()">Toggle exam / off-week mode</button></div>
+</div>
 <div class="common-room"><div><span class="kicker">THE GANG'S HANGOUT</span><h2>There's always room<br>at our table.</h2><p>Catch up after class. Trade stories. Make a little progress. Stay for the extra chai.</p></div><div class="table-art"><span>☕</span><span>📚</span><span>🎧</span><span>🧋</span><small>COMMON ROOM · TABLE 06</small></div></div>
 <div class="layout"><div class="card"><div class="row"><h2>Today's six promises</h2><span class="pill">Daily essentials</span></div><p class="muted">HARD MODE: complete all six essentials to unlock today’s story decision. Missed days never erase old progress.</p><div id="primary"></div><div class="bar"><i id="pbar"></i></div><div class="row"><span class="muted" id="taskHint">Every completed promise earns progress.</span><button class="btn alt" onclick="go('missions')">Open mission board</button></div></div>
 <div class="card"><div class="row"><h2>Daily side quests</h2><span class="pill">Your own 3</span></div><p class="muted">Write three new tasks for today. A fresh list is created automatically each local calendar day.</p><div id="sidePreview"></div><button class="btn alt" onclick="go('missions')">Manage side quests</button><div class="notice" style="margin-top:13px">Complete all three to earn +1 Intelligence and +1 Charisma. Reward is granted once per day.</div></div></div>
@@ -176,7 +265,40 @@ footer{color:#e7d8c5}
  </div><div class="notice"><b>Story promise:</b> every twist must grow from believable campus life—misunderstandings, family expectations, academic pressure, friendship, love, ambition and change. No secret societies, conspiracies, supernatural reveals or random shock twists.</div></div></div>
 </section>
 
+
 <section id="productivity" class="view">
+ <div class="hero a1000-productivity-hero">
+  <div><div class="eyebrow">YOUR REAL-LIFE GROWTH SPACE</div><h1>Student Command Center</h1>
+  <p>Plan less. Finish what matters. Build a life outside the screen.</p>
+  <div class="row" style="flex-wrap:wrap"><span class="pill">Study</span><span class="pill">Projects</span><span class="pill">Career</span><span class="pill">Skills</span></div></div>
+  <div class="heroRight"><div class="heroStat"><b id="pcOpenCount">0</b><span>Open tasks</span></div><div class="heroStat"><b id="pcDoneCount">0</b><span>Done today</span></div><div class="heroStat"><b id="pcMinutes">0m</b><span>Planned time</span></div><div class="heroStat"><b id="pcWeekDone">0</b><span>Done this week</span></div></div>
+ </div>
+ <div class="card pc-plan-card" style="margin:14px 0">
+  <div class="row"><div><span class="kicker">TODAY'S REALISTIC PLAN</span><h2 style="margin:4px 0">Pick your three priorities</h2></div><span class="pill" id="pcDate"></span></div>
+  <div class="grid2">
+   <label class="field">Available focused time (minutes)<input id="pcAvailable" class="field" type="number" min="15" max="600" step="15" value="120"></label>
+   <label class="field">Energy today<select id="pcEnergy" class="field"><option>Medium</option><option>High</option><option>Low</option></select></label>
+  </div>
+  <div class="row" style="flex-wrap:wrap"><button class="btn" onclick="pcBuildPlan()">Build realistic plan</button><button class="btn alt" onclick="pcClearDone()">Archive completed tasks</button></div>
+  <div id="pcPlanResult" class="notice" style="margin-top:12px">Your plan will appear here. Keep some free time for breaks and unexpected work.</div>
+ </div>
+ <div class="card" style="margin:14px 0">
+  <div class="row"><div><span class="kicker">QUICK CAPTURE</span><h2 style="margin:4px 0">Get it out of your head</h2></div><span class="pill">Saved on this device</span></div>
+  <div class="grid2">
+   <input id="pcTaskTitle" class="field" maxlength="100" placeholder="What needs to get done?">
+   <select id="pcTaskCategory" class="field"><option>Study</option><option>Project</option><option>Career</option><option>Personal</option><option>Admin</option></select>
+   <select id="pcTaskPriority" class="field"><option value="1">Priority: High</option><option value="2" selected>Priority: Medium</option><option value="3">Priority: Low</option></select>
+   <input id="pcTaskMinutes" class="field" type="number" min="5" max="600" step="5" value="30" placeholder="Estimated minutes">
+   <input id="pcTaskDue" class="field" type="date">
+   <button class="btn" onclick="pcAddTask()">Add task</button>
+  </div>
+  <p class="muted">Keep tasks actionable: “Solve five PLC timer questions” is better than “Study PLC”.</p>
+ </div>
+ <div class="card" style="margin:14px 0">
+  <div class="row"><h2>My action list</h2><div class="row"><span class="pill" id="pcFilterCount">0 tasks</span><select id="pcFilter" class="field" style="width:auto;margin:0" onchange="pcRender()"><option value="all">All tasks</option><option value="today">Due today</option><option value="open">Open only</option><option value="done">Completed</option></select></div></div>
+  <div id="pcTaskList"></div>
+ </div>
+
  <div class="card">
   <div class="row"><div><span class="kicker">YOUR REAL-LIFE GROWTH SPACE</span><h2 style="margin-top:5px">Productivity Center</h2></div><span class="pill">Study · Skills · Reflection</span></div>
   <p class="muted">A separate space for your real-world progress. Your existing story, tasks, friendships, festival and Pomodoro remain unchanged.</p>
@@ -239,7 +361,17 @@ footer{color:#e7d8c5}
 </section>
 
 
+
 <section id="lifeos" class="view">
+<div class="hero a1000-life-hero"><div><div class="eyebrow">YOUR PERSONAL OPERATING SYSTEM</div><h1>My Life OS 2.0</h1><p>Understand your direction, protect your energy, manage your money, and remember how far you have come.</p></div><div class="heroRight"><div class="heroStat"><b id="life2Milestones">0</b><span>Milestones</span></div><div class="heroStat"><b id="life2Saved">₹0</b><span>Net savings logged</span></div><div class="heroStat"><b id="life2Reviews">0</b><span>Life check-ins</span></div></div></div>
+<div class="card" style="margin:14px 0"><div class="row"><div><span class="kicker">LIFE BALANCE SNAPSHOT</span><h2 style="margin:4px 0">Six dimensions of your life</h2></div><span class="pill">Self-reflection, not a score</span></div><p class="muted">Rate how supported each area feels this month. You are not expected to maximize every area at once.</p><div id="life2Dimensions" class="grid2"></div><button class="btn" onclick="life2SaveDimensions()">Save monthly check-in</button><div id="life2DimensionHistory" class="memory-list"></div></div>
+<div class="layout">
+ <div class="card"><span class="kicker">PERSONAL FINANCE</span><h2>Simple money awareness</h2><p class="muted">Record income, expenses and savings manually. No bank connection or financial advice.</p><div class="grid2"><input id="life2MoneyAmount" class="field" type="number" min="1" step="0.01" placeholder="Amount (₹)"><select id="life2MoneyType" class="field"><option value="expense">Expense</option><option value="income">Income</option><option value="saving">Savings deposit</option></select><input id="life2MoneyCategory" class="field" maxlength="50" placeholder="Category (food, travel, salary…)"><input id="life2MoneyNote" class="field" maxlength="100" placeholder="Short note (optional)"></div><button class="btn" onclick="life2AddMoney()">Record transaction</button><div class="stats" style="margin-top:12px"><div class="stat"><b id="life2Income">₹0</b><span>Income</span></div><div class="stat"><b id="life2Expense">₹0</b><span>Expenses</span></div><div class="stat"><b id="life2Balance">₹0</b><span>Income − expenses</span></div></div><div id="life2MoneyList"></div></div>
+ <div class="card"><span class="kicker">YOUR LIFE TIMELINE</span><h2>Moments worth remembering</h2><p class="muted">Save meaningful achievements—not just big wins. Your first attempt counts too.</p><input id="life2MilestoneTitle" class="field" maxlength="100" placeholder="Milestone (e.g. First working prototype)"><select id="life2MilestoneType" class="field"><option>Learning</option><option>Project</option><option>Career</option><option>Personal</option><option>Relationship</option></select><textarea id="life2MilestoneNote" class="field" rows="2" maxlength="300" placeholder="Why this moment mattered…"></textarea><button class="btn" onclick="life2AddMilestone()">Save milestone</button><div id="life2Timeline"></div></div>
+</div>
+<div class="card" style="margin:14px 0"><div class="row"><div><span class="kicker">MONTHLY COMPASS</span><h2 style="margin:4px 0">Direction and boundaries</h2></div><span class="pill">Choose what matters now</span></div><input id="life2Direction" class="field" maxlength="160" placeholder="One outcome that matters this month"><div class="grid2"><textarea id="life2Stop" class="field" rows="2" maxlength="300" placeholder="What will I stop or reduce?"></textarea><textarea id="life2Continue" class="field" rows="2" maxlength="300" placeholder="What will I continue?"></textarea><textarea id="life2Support" class="field" rows="2" maxlength="300" placeholder="What support or resource do I need?"></textarea><textarea id="life2Boundary" class="field" rows="2" maxlength="300" placeholder="One boundary to protect my time / sleep"></textarea></div><button class="btn" onclick="life2SaveDirection()">Save monthly direction</button><div id="life2DirectionView" class="notice"></div></div>
+<div class="card" style="margin:14px 0"><div class="row"><div><span class="kicker">WEEKLY LIFE REVIEW</span><h2 style="margin:4px 0">A kind but honest review</h2></div><span class="pill">One next step</span></div><div class="grid2"><textarea id="life2WeekWin" class="field" rows="2" placeholder="What gave me energy this week?"></textarea><textarea id="life2WeekDrain" class="field" rows="2" placeholder="What drained my energy?"></textarea><textarea id="life2WeekLearn" class="field" rows="2" placeholder="What did I learn about myself?"></textarea><textarea id="life2WeekNext" class="field" rows="2" placeholder="One small action for next week"></textarea></div><button class="btn" onclick="life2SaveReview()">Save weekly life review</button><div id="life2ReviewHistory" class="memory-list"></div></div>
+
 <div class="hero"><div><div class="eyebrow">REAL-LIFE GROWTH · OUTSIDE THE GAME</div><h1>My Life OS</h1><p>Small improvements, meaningful direction, focused work and balanced living. This space is separate from game XP, coins and story progression.</p></div><div class="heroRight"><div class="heroStat"><b id="kaizenStreak">0</b><span>Kaizen check-ins</span></div><div class="heroStat"><b id="lifeReviews">0</b><span>Weekly reviews</span></div></div></div>
 <div class="card" style="margin-top:15px"><h2>1 · Kaizen — One small improvement</h2><p class="muted">Choose one realistic action for today. Small and repeatable is better than extreme.</p><div class="field"><label>Today's 1% improvement</label><input id="kaizenAction" placeholder="Example: practise PLC ladder logic for 10 minutes"></div><div class="field"><label>What did you actually do?</label><textarea id="kaizenNote" rows="2" placeholder="Write a short note"></textarea></div><button class="btn" onclick="saveKaizen()">Save today's Kaizen check-in</button><div id="kaizenHistory" class="memory-list"></div></div>
 <div class="card" style="margin-top:15px"><h2>2 · Ikigai — Explore your direction</h2><p class="muted">A reflection tool, not a test or a fixed formula. Your answers can change over time.</p><div class="grid2"><div class="field"><label>What do I enjoy?</label><textarea id="ikiLove" rows="2" placeholder="Things that energise me"></textarea></div><div class="field"><label>What am I learning to do well?</label><textarea id="ikiSkill" rows="2" placeholder="Skills and strengths"></textarea></div><div class="field"><label>What problems would I like to help solve?</label><textarea id="ikiNeed" rows="2" placeholder="People, community, industry"></textarea></div><div class="field"><label>What work could support me financially?</label><textarea id="ikiWork" rows="2" placeholder="Possible careers or services"></textarea></div></div><button class="btn" onclick="saveIkigai()">Save my reflection</button><p class="muted" id="ikigaiSaved"></p></div>
@@ -253,12 +385,67 @@ footer{color:#e7d8c5}
 
 <section id="phone" class="view"><div class="hero"><div><div class="eyebrow">THE GANG IS ONLINE</div><h1>Character Phone</h1><p>Messages, invitations and conversations that respond to your choices and campus life.</p></div><div class="heroRight"><div class="heroStat"><b id="unreadCount">0</b><span>Unread messages</span></div><div class="heroStat"><b id="chatCount">0</b><span>Conversations</span></div></div></div><div class="layout"><div class="card"><h2>Inbox</h2><p class="muted">New fictional messages are generated locally from the story day and your activity.</p><div id="phoneInbox"></div></div><div class="card"><h2 id="chatTitle">Choose a conversation</h2><div id="chatThread" class="storytext"></div><div id="chatActions"></div></div></div></section>
 <section id="events" class="view"><div class="hero"><div><div class="eyebrow">CAMPUS NEVER STANDS STILL</div><h1>Dynamic Campus Events</h1><p>Choose what to attend. Events rotate by day and remember your decisions.</p></div><div class="heroRight"><div class="heroStat"><b id="eventCount">0</b><span>Available today</span></div><div class="heroStat"><b id="eventAttended">0</b><span>Attended</span></div></div></div><div class="layout"><div class="card"><h2>Today's noticeboard</h2><div id="eventBoard"></div></div><div class="card"><h2>Campus event memories</h2><div id="eventHistory"></div></div></div></section>
-<section id="arcade" class="view"><div class="hero"><div><div class="eyebrow">TAKE A BREAK · PLAY FAIR</div><h1>Campus Arcade</h1><p>Short mini-games, personal records and collectible rewards. Play for fun; no real-life task penalties.</p></div><div class="heroRight"><div class="heroStat"><b id="arcadeBest">0</b><span>Best score</span></div><div class="heroStat"><b id="collectionCount">0</b><span>Collectibles</span></div></div></div><div class="layout"><div class="card"><h2>Quick Quiz Battle</h2><p id="quizQuestion" class="storytext">Ready for a quick challenge?</p><div id="quizChoices"></div><p id="quizFeedback" class="notice"></p><button class="btn" onclick="v16NewQuiz()">New quiz</button></div><div class="card"><h2>Memory Match</h2><p class="muted">Find matching pairs. Tap two cards per turn.</p><div id="memoryBoard" class="settings-grid"></div><p id="memoryStatus" class="notice"></p><button class="btn alt" onclick="v16NewMemory()">Restart memory game</button></div></div><div class="card" style="margin-top:14px"><div class="row"><h2>Rival Mode · Beat your previous self</h2><span class="pill">No public leaderboard</span></div><p class="muted">Your rival is last week’s version of you. Compare completed real-life missions over two seven-day periods.</p><div class="stats"><div class="stat"><b id="rivalNow">0</b><span>This week</span></div><div class="stat"><b id="rivalBefore">0</b><span>Previous week</span></div><div class="stat"><b id="rivalStatus">—</b><span>Result</span></div></div></div><div class="card" style="margin-top:14px"><h2>Your collection</h2><div id="v16Collection" class="tabs"></div></div></section>
-<section id="habits" class="view"><div class="hero"><div><div class="eyebrow">ATOMIC HABITS LABORATORY</div><h1>Build the person you want to become</h1><p>Make it obvious, attractive, easy and satisfying. Start tiny and track consistency without guilt.</p></div><div class="heroRight"><div class="heroStat"><b id="habitCount">0</b><span>Active habits</span></div><div class="heroStat"><b id="habitDone">0</b><span>Done today</span></div></div></div><div class="layout"><div class="card"><h2>Create a tiny habit</h2><input id="habitName" class="field" placeholder="e.g. Revise 5 EIE flashcards"><input id="habitCue" class="field" placeholder="After I… (habit cue)"><input id="habitTiny" class="field" placeholder="Make it easy: the 2-minute version"><button class="btn" onclick="v16AddHabit()">Add habit</button><div id="habitList"></div></div><div class="card"><h2>Habit stacking planner</h2><p class="muted">Attach a new action to something you already do.</p><div class="notice">After [existing routine], I will [tiny new habit] at [place].</div><div id="habitHistory"></div></div></div></section>
+<section id="arcade" class="view">
+<div class="hero v28-arcade-hero"><div><div class="eyebrow">CAMPUS COMMON ROOM · PLAY TO LEARN</div><h1>Campus Arcade 2.0</h1><p>Five quick activities. Train your brain, experiment with engineering, build ideas and enjoy campus stories. No streak pressure, loot boxes or penalties.</p></div><div class="heroRight"><div class="heroStat"><b id="v28ArcadePoints">0</b><span>Arcade points</span></div><div class="heroStat"><b id="v28ArcadePlays">0</b><span>Sessions played</span></div><div class="heroStat"><b id="v28ArcadeBadges">0</b><span>Badges earned</span></div></div></div>
+<div class="v28-arcade-tabs" role="tablist"><button class="btn v28-tab active" onclick="v28Show('brain')">🧠 Brain Arena</button><button class="btn v28-tab" onclick="v28Show('circuit')">⚡ Circuit Lab</button><button class="btn v28-tab" onclick="v28Show('campus')">🏫 Campus Life</button><button class="btn v28-tab" onclick="v28Show('word')">🔤 Word Builder</button><button class="btn v28-tab" onclick="v28Show('project')">🛠️ Project Builder</button></div>
+<div id="v28brain" class="v28-game card"><span class="kicker">3–5 MIN · THINK FAST</span><h2>Brain Arena</h2><p class="muted">Quick reasoning, memory and general knowledge rounds. Answer at your own pace.</p><div class="row"><span class="pill" id="v28BrainProgress">Question 1 / 5</span><span class="pill">+10 points per correct answer</span></div><h3 id="v28BrainQ" class="storytext">Ready for the challenge?</h3><div id="v28BrainChoices"></div><p id="v28BrainFeedback" class="notice">Choose an answer to begin.</p><button class="btn" id="v28BrainNext" onclick="v28BrainNext()">Start Brain Arena</button></div>
+<div id="v28circuit" class="v28-game card" hidden><span class="kicker">ENGINEERING MINI LAB</span><h2>Circuit Lab</h2><p class="muted">Solve practical electronics and instrumentation challenges. Learn from every answer.</p><div class="row"><span class="pill" id="v28CircuitProgress">Challenge 1 / 5</span><span class="pill">+15 points per correct answer</span></div><h3 id="v28CircuitQ" class="storytext">Ready to troubleshoot?</h3><div id="v28CircuitChoices"></div><p id="v28CircuitFeedback" class="notice">Start a lab round.</p><button class="btn" id="v28CircuitNext" onclick="v28CircuitNext()">Start Circuit Lab</button></div>
+<div id="v28campus" class="v28-game card" hidden><span class="kicker">INTERACTIVE CAMPUS STORY</span><h2>Campus Life Simulator</h2><p class="muted">A short campus moment. Pick a response and see how the day unfolds. There are no bad endings.</p><div class="row"><span class="pill" id="v28CampusDay">Campus moment 1 / 5</span><span class="pill">Choices shape the scene</span></div><h3 id="v28CampusQ" class="storytext">Your day is just beginning…</h3><div id="v28CampusChoices"></div><p id="v28CampusFeedback" class="notice"></p><button class="btn" id="v28CampusNext" onclick="v28CampusNext()">Begin campus day</button></div>
+<div id="v28word" class="v28-game card" hidden><span class="kicker">LANGUAGE & PATTERN PLAY</span><h2>Word Builder</h2><p class="muted">Unscramble a word from a useful student / technology vocabulary set.</p><div class="row"><span class="pill" id="v28WordRound">Round 1 / 5</span><span class="pill">+10 points per word</span></div><div class="v28-scramble" id="v28Scramble">READY</div><p class="muted" id="v28WordHint">Hint appears here.</p><input id="v28WordInput" class="field" maxlength="24" placeholder="Type your answer"><p id="v28WordFeedback" class="notice"></p><button class="btn" id="v28WordNext" onclick="v28WordNext()">Start Word Builder</button></div>
+<div id="v28project" class="v28-game card" hidden><span class="kicker">IDEA TO PROTOTYPE</span><h2>Project Builder</h2><p class="muted">Turn a random challenge into a tiny project plan. Complete the four steps to finish a build sprint.</p><div class="v28-project-prompt" id="v28ProjectPrompt">Your next idea is waiting.</div><div class="grid2"><div><label class="muted">1. Who has this problem?</label><textarea id="v28ProjectUser" class="field" rows="2" placeholder="Who would benefit?"></textarea></div><div><label class="muted">2. What is the smallest solution?</label><textarea id="v28ProjectSolution" class="field" rows="2" placeholder="Your simplest useful idea"></textarea></div><div><label class="muted">3. What will you need?</label><textarea id="v28ProjectParts" class="field" rows="2" placeholder="Materials, skills or tools"></textarea></div><div><label class="muted">4. What can you test today?</label><textarea id="v28ProjectTest" class="field" rows="2" placeholder="A 20-minute first experiment"></textarea></div></div><button class="btn" onclick="v28ProjectSave()">Save build sprint</button><button class="btn alt" onclick="v28ProjectNew()">New challenge</button><div id="v28ProjectHistory"></div></div>
+<div class="layout" style="margin-top:14px"><div class="card"><h2>My arcade profile</h2><div class="stats"><div class="stat"><b id="v28BestGame">—</b><span>Favorite game</span></div><div class="stat"><b id="v28TotalCorrect">0</b><span>Correct answers</span></div><div class="stat"><b id="v28Builds">0</b><span>Build sprints</span></div></div><div id="v28Badges" class="tabs"></div></div><div class="card"><h2>Recent arcade activity</h2><p class="muted">Your personal records stay on this device.</p><div id="v28ArcadeHistory"></div></div></div>
+</section>
+
+<section id="habits" class="view">
+ <div class="hero a1000-habit-hero"><div><div class="eyebrow">CONSISTENCY WITHOUT GUILT</div><h1>Advanced Habit Tracker</h1><p>Build routines that fit your real life. Small actions count. Rest days are allowed.</p></div><div class="heroRight"><div class="heroStat"><b id="ahActive">0</b><span>Active habits</span></div><div class="heroStat"><b id="ahToday">0/0</b><span>Today</span></div><div class="heroStat"><b id="ahRate">0%</b><span>7-day consistency</span></div></div></div>
+ <div class="layout" style="margin-top:14px">
+  <div class="card"><span class="kicker">CREATE A ROUTINE</span><h2>Design a habit that is easy to start</h2>
+   <input id="ahName" class="field" maxlength="70" placeholder="Habit name (e.g. Practice PLC for 15 minutes)">
+   <input id="ahCue" class="field" maxlength="100" placeholder="After I… (existing routine / cue)">
+   <input id="ahTiny" class="field" maxlength="100" placeholder="Minimum version (e.g. open notes and revise 1 concept)">
+   <div class="grid2"><select id="ahCategory" class="field"><option>Study</option><option>Technical skill</option><option>Physical</option><option>Wellbeing</option><option>Career</option><option>Personal</option></select><select id="ahDifficulty" class="field"><option value="easy">Easy</option><option value="normal" selected>Normal</option><option value="challenge">Challenge</option></select></div>
+   <label class="muted">Schedule</label><div class="ah-days" id="ahDays">
+    <label><input type="checkbox" value="1" checked> Mon</label><label><input type="checkbox" value="2" checked> Tue</label><label><input type="checkbox" value="3" checked> Wed</label><label><input type="checkbox" value="4" checked> Thu</label><label><input type="checkbox" value="5" checked> Fri</label><label><input type="checkbox" value="6"> Sat</label><label><input type="checkbox" value="0"> Sun</label>
+   </div>
+   <button class="btn" onclick="ahAdd()">Create habit</button>
+  </div>
+  <div class="card"><span class="kicker">TODAY'S ROUTINE</span><h2>Make it obvious. Make it doable.</h2><p class="muted">Complete the normal habit or choose its minimum version on a difficult day. No punishment for a missed day.</p><div id="ahTodayList"></div><div class="notice" id="ahRecoveryTip">Recovery rule: restart with the smallest possible version. Your past progress stays saved.</div></div>
+ </div>
+ <div class="card" style="margin-top:14px"><div class="row"><h2>My habit library</h2><span class="pill">Schedule · streak · notes</span></div><div id="ahLibrary"></div></div>
+ <div class="card" style="margin-top:14px"><div class="row"><h2>Consistency heatmap</h2><span class="pill">Last 28 days</span></div><div id="ahHeatmap" class="ah-heatmap"></div><p class="muted">The heatmap shows completed habits against habits scheduled for each day. It is a reflection tool, not a score of your worth.</p></div>
+ <div class="card" style="margin-top:14px"><h2>Habit insights</h2><div id="ahInsights" class="notice">Add a habit to begin building your consistency history.</div></div>
+<div class="hero"><div><div class="eyebrow">ATOMIC HABITS LABORATORY</div><h1>Build the person you want to become</h1><p>Make it obvious, attractive, easy and satisfying. Start tiny and track consistency without guilt.</p></div><div class="heroRight"><div class="heroStat"><b id="habitCount">0</b><span>Active habits</span></div><div class="heroStat"><b id="habitDone">0</b><span>Done today</span></div></div></div><div class="layout"><div class="card"><h2>Create a tiny habit</h2><input id="habitName" class="field" placeholder="e.g. Revise 5 EIE flashcards"><input id="habitCue" class="field" placeholder="After I… (habit cue)"><input id="habitTiny" class="field" placeholder="Make it easy: the 2-minute version"><button class="btn" onclick="v16AddHabit()">Add habit</button><div id="habitList"></div></div><div class="card"><h2>Habit stacking planner</h2><p class="muted">Attach a new action to something you already do.</p><div class="notice">After [existing routine], I will [tiny new habit] at [place].</div><div id="habitHistory"></div></div></div></section>
 <section id="missioncontrol" class="view"><div class="hero"><div><div class="eyebrow">GETTING THINGS DONE</div><h1>Mission Control</h1><p>Capture everything, clarify the next action, organize it, review it and then engage.</p></div><div class="heroRight"><div class="heroStat"><b id="inboxCount">0</b><span>Inbox items</span></div><div class="heroStat"><b id="nextCount">0</b><span>Next actions</span></div></div></div><div class="layout"><div class="card"><h2>Mind dump inbox</h2><textarea id="gtdInput" class="field" rows="3" placeholder="Anything on your mind? A task, idea, worry or reminder…"></textarea><button class="btn" onclick="v16Capture()">Capture</button><div id="gtdInbox"></div></div><div class="card"><h2>Next actions</h2><p class="muted">Turn vague goals into the very next physical action.</p><div id="gtdNext"></div><div class="notice">Example: “Prepare for placement” → “Open resume and update project section.”</div></div></div></section>
-<section id="campaign" class="view"><div class="hero"><div><div class="eyebrow">12-WEEK YEAR · EXECUTION OVER INTENTION</div><h1>Your 12-Week Campaign</h1><p>Choose one meaningful goal, define weekly milestones and review execution every week.</p></div><div class="heroRight"><div class="heroStat"><b id="campaignWeek">1</b><span>Current week</span></div><div class="heroStat"><b id="campaignRate">0%</b><span>Execution</span></div></div></div><div class="layout"><div class="card"><h2>Campaign goal</h2><input id="campaignGoal" class="field" placeholder="e.g. Become placement-ready in instrumentation"><input id="campaignOutcome" class="field" placeholder="What will be measurably different after 12 weeks?"><button class="btn" onclick="v16SaveCampaign()">Save campaign</button><div id="campaignPlan"></div></div><div class="card"><h2>Weekly actions</h2><input id="campaignAction" class="field" placeholder="This week's most important action"><button class="btn alt" onclick="v16AddCampaignAction()">Add weekly action</button><div id="campaignActions"></div></div></div></section>
+<section id="campaign" class="view"><div class="hero"><div><div class="eyebrow">12-WEEK YEAR · EXECUTION OVER INTENTION</div><h1>Your 12-Week Campaign</h1><p>Choose one meaningful goal, define weekly milestones and review execution every week.</p></div><div class="heroRight"><div class="heroStat"><b id="campaignWeek">1</b><span>Current week</span></div><div class="heroStat"><b id="campaignRate">0%</b><span>Execution</span></div></div></div><div class="layout"><div class="card"><h2>Campaign goal</h2><input id="campaignGoal" class="field" placeholder="e.g. Become placement-ready in instrumentation"><input id="campaignOutcome" class="field" placeholder="What will be measurably different after 12 weeks?"><button class="btn" onclick="v16SaveCampaign()">Save campaign</button><div id="campaignPlan"></div></div><div class="card"><h2>Weekly actions</h2><input id="campaignAction" class="field" placeholder="This week's most important action"><button class="btn alt" onclick="v16AddCampaignAction()">Add weekly action</button><div id="campaignActions"></div></div></div>
+<div class="card v29-campaign-card" style="margin-top:14px"><div class="row"><div><span class="kicker">12-WEEK EXECUTION SYSTEM</span><h2 style="margin:4px 0">Campaign Blueprint</h2></div><span class="pill">Plan · Execute · Review</span></div>
+<p class="muted">Turn a broad goal into a measurable outcome, three phases and one realistic weekly commitment. Keep one main campaign at a time.</p>
+<div class="grid2"><div class="field"><label>Starting point / baseline</label><input id="c29Baseline" placeholder="Where am I now?"></div><div class="field"><label>Target after 12 weeks</label><input id="c29Target" placeholder="What evidence will prove progress?"></div><div class="field"><label>Hours available per week</label><input id="c29Hours" type="number" min="1" max="60" value="5"></div><div class="field"><label>Why does this matter?</label><input id="c29Why" placeholder="Your personal reason"></div></div><button class="btn" onclick="c29SaveBlueprint()">Save campaign blueprint</button><div id="c29BlueprintView" class="notice"></div></div>
+<div class="card v29-campaign-card" style="margin-top:14px"><div class="row"><h2>12-week roadmap</h2><span class="pill">Three phases</span></div><div id="c29Roadmap" class="c29-roadmap"></div></div>
+<div class="layout" style="margin-top:14px"><div class="card"><span class="kicker">THIS WEEK'S COMMITMENT</span><h2>Choose your weekly Big 3</h2><p class="muted">Three important actions are enough. Make each action specific and finishable.</p><input id="c29Action" class="field" maxlength="120" placeholder="Action (e.g. complete 2 PLC ladder programs)"><select id="c29Priority" class="field"><option value="1">Priority 1 · Must do</option><option value="2">Priority 2 · Important</option><option value="3">Priority 3 · If time allows</option></select><input id="c29Evidence" class="field" maxlength="120" placeholder="Evidence of completion (file, demo, score…)"><button class="btn" onclick="c29AddAction()">Add weekly action</button><div id="c29WeeklyActions"></div><p class="muted" id="c29Capacity"></p></div>
+<div class="card"><span class="kicker">WEEKLY REVIEW</span><h2>Close the loop</h2><p class="muted">A short review helps you adjust instead of abandoning the goal.</p><div class="field"><label>What actually moved forward?</label><textarea id="c29ReviewWin" rows="2"></textarea></div><div class="field"><label>What blocked me?</label><textarea id="c29ReviewBlock" rows="2"></textarea></div><div class="field"><label>What will I change next week?</label><textarea id="c29ReviewChange" rows="2"></textarea></div><div class="field"><label>Confidence for next week (1–5)</label><input id="c29Confidence" type="range" min="1" max="5" value="3"></div><button class="btn" onclick="c29SaveReview()">Save weekly review</button><div id="c29ReviewHistory"></div></div></div>
+<div class="card v29-campaign-card" style="margin-top:14px"><h2>Progress evidence & campaign health</h2><div class="grid2"><div class="stat"><b id="c29Done">0</b><span>Actions completed</span></div><div class="stat"><b id="c29Total">0</b><span>Actions planned</span></div><div class="stat"><b id="c29ReviewCount">0</b><span>Weekly reviews</span></div><div class="stat"><b id="c29Health">Ready</b><span>Campaign health</span></div></div><div id="c29EvidenceLog"></div></div>
+</section>
 <section id="vault" class="view"><div class="hero"><div><div class="eyebrow">BUILDING A SECOND BRAIN · PARA</div><h1>Personal Knowledge Vault</h1><p>Capture what you learn and connect it to projects, areas, resources and archives.</p></div><div class="heroRight"><div class="heroStat"><b id="vaultCount">0</b><span>Knowledge cards</span></div><div class="heroStat"><b id="vaultProjects">0</b><span>Projects</span></div></div></div><div class="layout"><div class="card"><h2>Save a knowledge card</h2><input id="vaultTitle" class="field" placeholder="Title: MODBUS RTU basics"><select id="vaultCategory" class="field"><option>Projects</option><option>Areas</option><option>Resources</option><option>Archives</option></select><textarea id="vaultNote" class="field" rows="4" placeholder="Key idea, explanation, formula, link or revision note…"></textarea><button class="btn" onclick="v16SaveNote()">Save to vault</button></div><div class="card"><h2>My knowledge library</h2><input id="vaultSearch" class="field" placeholder="Search your notes…" oninput="v16RenderVault()"><div id="vaultList"></div></div></div></section>
-<section id="settings" class="view"><div class="hero"><div><div class="eyebrow">YOUR PHONE · YOUR ROUTINE</div><h1>Alerts & App Setup</h1><p>Choose reminders, test notifications and add A COLLEGE OF 1000 DAYS to your Home Screen.</p></div></div><div class="settings-grid"><div class="card"><h2>Phone notifications</h2><p class="muted" id="permissionStatus">Permission not requested.</p><button class="btn" onclick="enableNotifications()">Enable notifications</button> <button class="btn alt" onclick="sendTestNotification()">Send test</button><p class="muted">Requires HTTPS hosting and your permission. Reliable alerts while Chrome is fully closed need a push server, not yet connected.</p></div><div class="card"><h2>Install as an app</h2><p class="muted">After HTTPS hosting, use this button or Chrome menu → Add to Home screen / Install app.</p><button class="btn" id="installAppBtn" onclick="installApp()" disabled>Install A COLLEGE OF 1000 DAYS</button><p id="installHelp" class="muted">Chrome will show this when the hosted site is installable.</p></div></div><div class="card" style="margin-top:14px"><h2>Notification Diagnostics</h2><p class="muted">Check whether this installed app can register its background notification worker and display a test alert.</p><div id="notificationDiagnostics" class="notice">Checking app notification support…</div><button class="btn alt" style="margin-top:10px" onclick="runNotificationDiagnostics()">Run diagnostics</button></div><div class="card" style="margin-top:14px"><h2>Notification schedule</h2><p class="muted">Scheduled checks work while the website is open. Background push needs server integration.</p><div id="notificationSettings"></div><button class="btn" style="margin-top:12px" onclick="saveNotificationSettings()">Save settings</button></div><div class="card" style="margin-top:14px"><h2>Cliffhanger style</h2><div class="notice">“Rahul just received a message he wasn't supposed to see. Tomorrow, the gang finds out why. 👀”</div></div></section><section id="year" class="view"><div class="card"><div class="row"><h2>The 1,000-day college journey</h2><span class="pill">12 connected story arcs</span></div><p class="muted">The calendar is fixed; daily scenes and dialogue can evolve as your story grows.</p><div id="arcList"></div><div class="calendar" id="calendar"></div></div></section>
+<section id="settings" class="view"><div class="hero"><div><div class="eyebrow">YOUR PHONE · YOUR ROUTINE</div><h1>Alerts & App Setup</h1><p>Choose reminders, test notifications and add A COLLEGE OF 1000 DAYS to your Home Screen.</p></div></div>
+<div class="card" style="margin:14px 0">
+ <div class="row"><h2>Standalone app status</h2><span class="pill" id="a1000-install-state">Checking…</span></div>
+ <p class="muted" id="a1000-pwa-status">This app can run in its own window when installed. Offline access uses the service worker cache.</p>
+ <div class="row" style="flex-wrap:wrap"><button class="btn" onclick="a1000Install()">Install / open install help</button><button class="btn alt" onclick="a1000CheckOffline()">Check offline readiness</button></div>
+ <p class="muted" id="a1000-offline-status"></p>
+</div>
+<div class="card" style="margin:14px 0">
+ <h2>Progress backup & restore</h2>
+ <p class="muted">Export a backup before changing phones or browsers. This includes your existing app save keys and the new planner settings. The app never uploads this data.</p>
+ <div class="row" style="flex-wrap:wrap"><button class="btn" onclick="a1000ExportBackup()">Download my backup</button><label class="btn alt" for="a1000-import-file">Restore backup</label><input id="a1000-import-file" type="file" accept="application/json,.json" style="display:none" onchange="a1000ImportBackup(event)"></div>
+ <p class="muted" id="a1000-backup-status" aria-live="polite"></p>
+</div>
+<div class="card" style="margin:14px 0">
+ <h2>Healthy-use controls</h2>
+ <p class="muted">Exam mode reduces pressure. It does not reset streaks, remove rewards, or lock your story. Sleep and real-life priorities come first.</p>
+ <label style="display:flex;gap:10px;align-items:center"><input type="checkbox" id="a1000-offweek" onchange="a1000SaveMode(this.checked)"> <b>Exam / off-week mode</b></label>
+ <p class="muted" id="a1000-mode-description">Standard mode: your usual daily plan.</p>
+</div>
+<div class="settings-grid"><div class="card"><h2>Phone notifications</h2><p class="muted" id="permissionStatus">Permission not requested.</p><button class="btn" onclick="enableNotifications()">Enable notifications</button> <button class="btn alt" onclick="sendTestNotification()">Send test</button><p class="muted">Requires HTTPS hosting and your permission. Reliable alerts while Chrome is fully closed need a push server, not yet connected.</p></div><div class="card"><h2>Install as an app</h2><p class="muted">After HTTPS hosting, use this button or Chrome menu → Add to Home screen / Install app.</p><button class="btn" id="installAppBtn" onclick="installApp()" disabled>Install A COLLEGE OF 1000 DAYS</button><p id="installHelp" class="muted">Chrome will show this when the hosted site is installable.</p></div></div><div class="card" style="margin-top:14px"><h2>Notification Diagnostics</h2><p class="muted">Check whether this installed app can register its background notification worker and display a test alert.</p><div id="notificationDiagnostics" class="notice">Checking app notification support…</div><button class="btn alt" style="margin-top:10px" onclick="runNotificationDiagnostics()">Run diagnostics</button></div><div class="card" style="margin-top:14px"><h2>Notification schedule</h2><p class="muted">Scheduled checks work while the website is open. Background push needs server integration.</p><div id="notificationSettings"></div><button class="btn" style="margin-top:12px" onclick="saveNotificationSettings()">Save settings</button></div><div class="card" style="margin-top:14px"><h2>Cliffhanger style</h2><div class="notice">“Rahul just received a message he wasn't supposed to see. Tomorrow, the gang finds out why. 👀”</div></div></section><section id="year" class="view"><div class="card"><div class="row"><h2>The 1,000-day college journey</h2><span class="pill">12 connected story arcs</span></div><p class="muted">The calendar is fixed; daily scenes and dialogue can evolve as your story grows.</p><div id="arcList"></div><div class="calendar" id="calendar"></div></div></section>
 
 <section id="abstract" class="view">
  <div class="card">
@@ -758,53 +945,58 @@ document.addEventListener('DOMContentLoaded',gRender);
 /* ===== v23 reliability + novel episode corrections ===== */
 const A1000_V23 = true;
 function a1000CardForDay(n){
-  const base=DAY_STORY_CARDS[Math.max(0,Math.min(DAY_STORY_CARDS.length-1,n-1))];
-  if(base && n<=DAY_STORY_CARDS.length) return base;
-  const seasonNo=Math.min(4,Math.floor((n-1)/250)+1);
-  const seasonNames=['Lab Mix-Up','Fest Committee','Hackathon Arc','Last Semester'];
-  const themes=[
-    ['A Lab That Would Not Cooperate','Ash and the gang face an unexpected practical problem.'],
-    ['The Festival Nobody Planned For','A small misunderstanding threatens a team effort.'],
-    ['The Prototype That Changed Everything','A project setback forces Ash to rethink what success means.'],
-    ['The Last Ordinary Thursday','The friends discover that growing up means choosing what to carry forward.']
-  ];
-  const t=themes[seasonNo-1];
-  return {title:`${t[0]} · Chapter ${n}`,arc:seasonNames[seasonNo-1],
-    premise:`On day ${n}, Ash finds that college life rarely follows the timetable. ${t[1]} The gang must listen, adapt, and decide what matters most.`,
-    resolution:'By the end of the day, the group makes one practical step forward, even though not every feeling has been settled.',
-    twist:'A familiar detail in the old notebook appears in a new context, raising a personal question rather than revealing a conspiracy.',
-    teaser:`Day ${n}: ${t[1]}`};
+ if(n===1)return {day:1,title:'The First Day · Ash Enters College',arc:'Lab Mix-Up · First Bell',arcMood:'new campus, first impressions and the first friendships',premise:'Ash enters the engineering college for the first time, finds the EIE block, and slowly meets the people who may become the closest friends of this journey.',resolution:'By the end of the day, Ash has found the classroom, met the gang and agreed to meet them again tomorrow.',twist:'The first group-chat message makes the unfamiliar campus feel a little more like home.',teaser:'Day 001: Ash steps through the college gate for the first time. A new campus, a new beginning, and five names to remember.'};
+ const existing=DAY_STORY_CARDS[Math.max(0,Math.min(DAY_STORY_CARDS.length-1,n-1))];
+ if(n<=DAY_STORY_CARDS.length && existing) return existing;
+ const arc=arcFor(n),arcIndex=ARCS.indexOf(arc),arcTitle=arc[0],day=String(n).padStart(3,'0');
+ const kits=[
+  {titles:['The Bench Beside the Window','A Name on the Lab Register','The First Team Promise','The Reading Nobody Expected','A Small Step Toward Belonging'],premises:['Ash is still learning the rhythms of the EIE block when a practical session puts an unfamiliar responsibility in their hands.','A small classroom mix-up brings Ash and the gang together to compare what each person understood.','A routine college task becomes a test of trust when the group must divide responsibility fairly.'],resolutions:['The group checks the facts, shares the work and agrees on a practical next step.','Ash learns that asking a clear question is often braver than pretending to know.'],twists:['A familiar face quietly remembers the first day and offers an unexpected kindness.','A note in Ash’s planner records a promise the gang made to one another.']},
+  {titles:['The Festival List Changes','One More Rehearsal','The Volunteer Who Stayed','A Plan Made of Paper','The Light Test'],premises:['The campus festival committee discovers that the original schedule no longer fits the people available.','A rehearsal runs late, and Ash must help the group choose what matters most before opening day.','A small disagreement over festival duties reveals how differently the friends define fairness.'],resolutions:['The gang reshapes the plan so everyone has a meaningful role.','Ash discovers that a successful event is built from many quiet contributions.'],twists:['An old practice photo shows someone who helped more than anyone noticed.','The final noticeboard carries a handwritten thank-you from an unexpected person.']},
+  {titles:['The Prototype Revision','A Test That Failed Honestly','The Team’s Missing Piece','Demo Notes at Midnight','The Version That Worked'],premises:['The hackathon team faces a technical limitation that cannot be solved by adding more features.','A prototype behaves differently outside the lab, forcing Ash to question the assumptions behind the design.','A team deadline exposes a gap between a promising idea and a testable solution.'],resolutions:['The team reduces the scope, tests one assumption and documents what the prototype can really do.','Ash learns to value repeatable evidence over an impressive-looking demo.'],twists:['A discarded sketch from the first week becomes useful again.','The mentor asks the team to explain one limitation rather than hide it.']},
+  {titles:['The Shortlist Notice','A Future in Two Directions','The Last Lab Record','A Conversation After Class','The Things We Carry Home'],premises:['Placement news arrives while the final project still needs careful work, and Ash must decide how to divide attention.','A familiar campus routine feels different as the final semester moves closer to its end.','The gang begins making plans for life after college, but not everyone is ready to say goodbye.'],resolutions:['Ash makes a realistic next-step plan and speaks honestly with the people affected.','The friends make room for both ambition and the sadness of change.'],twists:['A message from the first-year group chat resurfaces with a very different meaning.','The gang returns to the place where they first met and notices how much has changed.']}
+ ];
+ const kit=kits[Math.min(3,Math.floor((n-1)/250))],ix=(n*7+Math.floor(n/11))%kit.titles.length,sub=kit.titles[ix];
+ const premise=kit.premises[(n+arcIndex)%kit.premises.length],resolution=kit.resolutions[(n+2*arcIndex)%kit.resolutions.length],twist=kit.twists[(n+arcIndex)%kit.twists.length];
+ return {day:n,title:`${sub} · Day ${day}`,arc:arcTitle,arcMood:arc[1],premise:`${arc[1]}. ${premise} This chapter belongs to ${arcTitle}.`,resolution,twist,teaser:`Day ${day} · ${arcTitle}: ${sub}. ${premise}`};
 }
-function storyForDay(n){
- const card=a1000CardForDay(n);
- return {title:card.title,teaser:card.teaser||card.premise,body:[card.premise,card.resolution,card.twist]};
-}
+function storyForDay(n){const card=a1000CardForDay(n);return {title:card.title,teaser:card.teaser||card.premise,body:[card.premise,card.resolution,card.twist]};}
 function choicesForDay(n){
  const card=a1000CardForDay(n),t=(card.title+' '+card.premise+' '+card.arc).toLowerCase();
- const a=/lab|prototype|instrument|sensor|measurement|circuit|practical/.test(t);
- const b=/friend|message|argument|festival|team|group|relationship/.test(t);
+ const a=/lab|prototype|instrument|sensor|measurement|circuit|practical|test/.test(t);
+ const b=/friend|message|argument|festival|team|group|relationship|goodbye/.test(t);
  const options=a?[
   {label:'Pause, verify the details, and explain what is really happening.',friend:'Karthik',style:'careful'},
-  {label:'Bring everyone together and solve the problem as a team.',friend:'Arjun',style:'people'}
+  {label:'Bring everyone together and solve the problem as a team.',friend:'Arjun',style:'people'},
+  {label:'Try a small test before committing to the full solution.',friend:'Meera',style:'initiative'}
  ]:b?[
   {label:'Talk privately and listen before making a decision.',friend:'Divya',style:'people'},
-  {label:'Be honest with the whole group and take responsibility.',friend:'Arjun',style:'initiative'}
+  {label:'Be honest with the whole group and take responsibility.',friend:'Arjun',style:'initiative'},
+  {label:'Give everyone time, then agree on a fair next step.',friend:'Priya',style:'careful'}
  ]:[
   {label:'Take the thoughtful route and check the facts first.',friend:'Karthik',style:'careful'},
-  {label:'Take the brave route and start the conversation.',friend:'Divya',style:'people'}
+  {label:'Take the brave route and start the conversation.',friend:'Divya',style:'people'},
+  {label:'Take initiative and make a simple plan.',friend:'Rahul',style:'initiative'}
  ];
  return options;
 }
 function episodeScenes(){
  const n=dayNo(),card=a1000CardForDay(n),arc=arcFor(n),friend=CHARACTERS[(n+1)%CHARACTERS.length];
+ if(n===1)return [
+  {k:'SCENE 1 · FIRST MORNING',t:'The college gate',c:'DAY 001 · Ash stands outside the engineering college gate with a new ID card, a bag that suddenly feels too heavy, and a timetable folded into four uneven pieces. The campus is louder and larger than expected. A group of students walks past laughing. Ash takes one breath, checks the department name again, and steps inside. Today is the first page of a life that has not happened yet.'},
+  {k:'SCENE 2 · FINDING THE EIE BLOCK',t:'Wrong corridor, right people',c:'The first challenge is finding the Electronics and Instrumentation Engineering block. Ash takes one wrong turn and ends up near the library. Rahul notices the confused timetable and offers directions with complete confidence—and absolutely no accuracy. Priya steps in, checks the room number, and points toward the correct staircase. “First day?” she asks. Ash nods. “Same building, different confusion,” Rahul says.'},
+  {k:'SCENE 3 · THE FIRST CLASS',t:'A seat near the window',c:'Inside the classroom, Ash chooses an empty seat near the window. Dr. Kavitha welcomes the new batch and talks about curiosity, practical learning and asking questions without fear. Arjun introduces himself to almost everyone in two minutes. Meera quietly shares a spare pen. Karthik is already checking the timetable. The names are new, but the small gestures make the room feel less unfamiliar.'},
+  {k:'SCENE 4 · THE INTRODUCTION',t:'Five strangers and one awkward question',c:'The lecturer asks everyone to introduce themselves and say one thing they hope to learn. Ash’s turn arrives sooner than expected. The answer comes out a little shaky, but honest. Rahul makes a gentle joke to ease the tension. Priya remembers Ash’s name. Arjun suggests the group should sit together tomorrow. Meera smiles, and Karthik saves a place in the class group chat.'},
+  {k:'SCENE 5 · CAMPUS AT LUNCH',t:'A table begins to become familiar',c:'At lunch, Ash finds the same small group near the canteen. Nobody knows the campus shortcuts yet, and the menu board seems to have its own language. They trade school stories, compare bus routes and laugh about the morning’s wrong turn. For the first time that day, Ash stops checking the timetable every thirty seconds.'},
+  {k:'SCENE 6 · THE FIRST PROMISE',t:'Tomorrow, same place?',c:'Before the afternoon class, the group agrees to meet near the department noticeboard the next morning. It is not a dramatic promise—just a practical plan so nobody has to walk into a new classroom alone. Ash writes the names Rahul, Priya, Arjun, Meera and Karthik on the first page of a fresh notebook. A small beginning, but a beginning all the same.'},
+  {k:'SCENE 7 · YOUR FIRST CHOICE',t:'How will Ash step into college life?',c:'The day is nearly over. Ash can keep to the familiar comfort of observing quietly, make the first effort to talk to someone, or volunteer to help the group find their next classroom. There is no wrong answer. This first choice will become part of Ash’s college memories.'},
+  {k:'SCENE 8 · DAY ONE FINALE',t:'A message before going home',c:'As Ash leaves the campus, the class group chat lights up. Rahul has named it “EIE Survivors” even though the first day is not over. Priya changes the group description to “Please share actual timetable updates.” Meera sends a photo of the department sign. Karthik adds tomorrow’s room number. Ash smiles at the phone. The college still feels huge—but it no longer feels completely unfamiliar.\n\nCLOSING QUESTION: What is one small thing Ash wants to be brave enough to try tomorrow?'}
+ ];
  const names=['Rahul','Priya','Arjun','Meera','Karthik','Divya'];
- const focus=names[(n*3)%names.length],second=names[(n*5+2)%names.length];
- const tech=TECH_BITS[(n-1)%TECH_BITS.length];
- const opts=choicesForDay(n);
+ const focus=names[(n*3)%names.length],second=names[(n*5+2)%names.length],tech=TECH_BITS[(n-1)%TECH_BITS.length],opts=choicesForDay(n);
  return [
-  {k:'SCENE 1 · MORNING',t:'An ordinary day, slightly out of balance',c:`DAY ${String(n).padStart(3,'0')} · ${card.arc||arc}\n\nAsh reaches campus expecting an ordinary day. ${card.premise} ${focus} notices that something is bothering the group, but nobody wants to be the first to say it.`},
+  {k:'SCENE 1 · MORNING',t:'An ordinary day, slightly out of balance',c:`DAY ${String(n).padStart(3,'0')} · ${card.arc||arc[0]}\n\nAsh reaches campus expecting an ordinary day. ${card.premise} ${focus} notices that something is bothering the group, but nobody wants to be the first to say it.`},
   {k:'SCENE 2 · CAMPUS LIFE',t:'Between class and the canteen',c:`The gang gathers between lectures. ${friend} sees the situation differently. Rahul tries to make a joke, Priya asks what actually happened, and ${second} quietly admits that the problem feels more personal than it first appeared.`},
-  {k:'SCENE 3 · THE TURN',t:card.title,c:`${card.resolution}\n\nA detail changes the way Ash understands the situation: ${card.twist} It is not a grand conspiracy or a perfect answer. It is a small truth that makes the people involved seem more human.`},
+  {k:'SCENE 3 · THE TURN',t:card.title,c:`${card.resolution}\n\nA detail changes the way Ash understands the situation: ${card.twist} It is a small truth that makes the people involved seem more human.`},
   {k:'SCENE 4 · A CHOICE',t:'What kind of person will Ash be?',c:`The group pauses. The technical side connects to ${tech}, but the real challenge is how Ash treats the people involved. ${opts[0].label}\n\nOr: ${opts[1].label}`},
   {k:'SCENE 5 · NIGHT REFLECTION',t:'Some answers take longer than one day',c:`By evening, the immediate problem has a next step. Ash walks back across campus thinking about the difference between being liked, being right, and being honest. ${second} sends one last message: “I think there's something I should have told you earlier.”\n\nCLOSING QUESTION: What did today teach Ash about the person he is becoming?`}
  ];
@@ -853,3 +1045,284 @@ function choose(i){
 }
 
 </script>
+
+<script>
+
+/* A COLLEGE OF 1000 DAYS v24 — productivity-first PWA layer.
+   Existing game save keys are never renamed, cleared, or overwritten. */
+(function(){
+ const KEY='a1000PwaProductivity_v24';
+ const today=()=>new Date().toLocaleDateString('en-CA');
+ function read(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){return {}}}
+ function write(x){localStorage.setItem(KEY,JSON.stringify(x))}
+ function day(){let x=read();x.days=x.days||{};x.days[today()]=x.days[today()]||{frog:'',done:false};return [x,x.days[today()]]}
+ window.a1000SaveFrog=function(){
+  let input=document.getElementById('a1000-frog-input');if(!input)return;
+  let [x,d]=day();d.frog=input.value.trim();write(x);a1000RenderExtras();if(typeof notify==='function')notify(d.frog?'Today’s frog task saved.':'Task cleared.');
+ };
+ window.a1000ToggleFrog=function(v){let [x,d]=day();d.done=!!v;write(x);a1000RenderExtras();};
+ window.a1000SetOffWeek=function(){let x=read();x.offWeek=!x.offWeek;write(x);a1000RenderExtras();if(typeof notify==='function')notify(x.offWeek?'Exam / off-week mode enabled.':'Standard mode restored.');};
+ window.a1000SaveMode=function(v){let x=read();x.offWeek=!!v;write(x);a1000RenderExtras();};
+ window.a1000RenderExtras=function(){
+  let x=read(),d=(x.days||{})[today()]||{frog:'',done:false},inp=document.getElementById('a1000-frog-input'),check=document.getElementById('a1000-frog-done');
+  if(inp&&document.activeElement!==inp)inp.value=d.frog||'';if(check)check.checked=!!d.done;
+  let status=document.getElementById('a1000-frog-status');if(status)status.textContent=d.done?'Completed — nice work.':d.frog?'One priority saved.':'No frog task set yet.';
+  let pill=document.getElementById('a1000-mode-pill'),off=!!x.offWeek;if(pill)pill.textContent=off?'Exam / off-week mode':'Standard mode';
+  let cb=document.getElementById('a1000-offweek');if(cb)cb.checked=off;
+  let desc=document.getElementById('a1000-mode-description');if(desc)desc.textContent=off?'Off-week mode: focus on essentials; optional tasks can wait. No streak or reward penalties.':'Standard mode: your usual daily plan.';
+  let install=document.getElementById('a1000-install-state');if(install)install.textContent=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone?'Installed':'Installable PWA';
+ };
+ window.a1000Install=async function(){
+  if(typeof installApp==='function'){installApp();return;}
+  if(/Android/i.test(navigator.userAgent)){alert('In Chrome, open ⋮ and choose Install app or Add to Home screen.');return;}
+  alert('Use your browser menu and choose Install app / Add to Home Screen.');
+ };
+ window.a1000CheckOffline=async function(){
+  let el=document.getElementById('a1000-offline-status');if(!el)return;
+  if(!('serviceWorker'in navigator)){el.textContent='This browser does not support service workers.';return;}
+  try{let reg=await navigator.serviceWorker.getRegistration();el.textContent=reg&&reg.active?'Offline app worker is active. Open the app once online so its files are cached.':'Service worker is not active yet. Open the hosted app over HTTPS and refresh.';}
+  catch(e){el.textContent='Could not check offline status: '+e.message;}
+ };
+ window.a1000ExportBackup=function(){
+  let payload={format:'A1000_BACKUP',version:1,createdAt:new Date().toISOString(),storage:{}};
+  for(let i=0;i<localStorage.length;i++){let k=localStorage.key(i);payload.storage[k]=localStorage.getItem(k);}
+  let blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url;a.download='a-college-of-1000-days-backup-'+today()+'.json';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+  let s=document.getElementById('a1000-backup-status');if(s)s.textContent='Backup downloaded to your device. Keep it somewhere safe.';
+ };
+ window.a1000ImportBackup=function(ev){
+  let file=ev.target.files&&ev.target.files[0];if(!file)return;
+  let reader=new FileReader();reader.onload=()=>{
+   try{
+    let data=JSON.parse(reader.result);if(data.format!=='A1000_BACKUP'||!data.storage||typeof data.storage!=='object')throw new Error('This is not an A COLLEGE OF 1000 DAYS backup.');
+    if(!confirm('Restore this backup? Existing keys with matching names will be replaced. Download a backup of your current progress first.'))return;
+    Object.keys(data.storage).forEach(k=>{if(typeof data.storage[k]==='string')localStorage.setItem(k,data.storage[k]);});
+    let s=document.getElementById('a1000-backup-status');if(s)s.textContent='Backup restored. Reload the app to refresh all screens.';
+    if(typeof notify==='function')notify('Backup restored. Please reload the app.');
+   }catch(e){let s=document.getElementById('a1000-backup-status');if(s)s.textContent='Restore failed: '+e.message;}
+  };reader.readAsText(file);ev.target.value='';
+ };
+ // Wrap the existing renderer so legacy game UI and new planner remain in sync.
+ if(typeof window.render==='function'){const old=window.render;window.render=function(){old.apply(this,arguments);a1000RenderExtras();};}
+ document.addEventListener('DOMContentLoaded',()=>{a1000RenderExtras();});
+ setTimeout(()=>a1000RenderExtras(),0);
+})();
+
+</script>
+
+<script>
+
+/* Productivity Command Center v25 — isolated data store, preserves all legacy saves. */
+(function(){
+ const KEY='a1000ProductivityCenter_v25';
+ const iso=()=>new Date().toLocaleDateString('en-CA');
+ const startWeek=()=>{let d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()-((d.getDay()+6)%7));return d.toLocaleDateString('en-CA');};
+ function load(){try{let x=JSON.parse(localStorage.getItem(KEY)||'{}');if(!Array.isArray(x.tasks))x.tasks=[];return x;}catch(e){return {tasks:[]};}}
+ function save(x){localStorage.setItem(KEY,JSON.stringify(x));}
+ const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ window.pcAddTask=function(){
+  let title=document.getElementById('pcTaskTitle').value.trim();if(!title){alert('Enter a task first.');return;}
+  let x=load();x.tasks.unshift({id:'t'+Date.now()+Math.random().toString(36).slice(2,6),title,category:document.getElementById('pcTaskCategory').value,priority:Number(document.getElementById('pcTaskPriority').value)||2,minutes:Math.max(5,Math.min(600,Number(document.getElementById('pcTaskMinutes').value)||30)),due:document.getElementById('pcTaskDue').value||'',created:iso(),done:false,completedAt:''});
+  save(x);document.getElementById('pcTaskTitle').value='';pcRender();if(typeof notify==='function')notify('Task added to your action list.');
+ };
+ window.pcToggleTask=function(id){let x=load(),t=x.tasks.find(t=>t.id===id);if(!t)return;t.done=!t.done;t.completedAt=t.done?iso():'';save(x);pcRender();};
+ window.pcDeleteTask=function(id){let x=load();x.tasks=x.tasks.filter(t=>t.id!==id);save(x);pcRender();};
+ window.pcClearDone=function(){let x=load();x.tasks=x.tasks.filter(t=>!t.done);save(x);pcRender();};
+ window.pcRender=function(){
+  let x=load(),tasks=x.tasks,filter=document.getElementById('pcFilter')?.value||'all',today=iso(),week=startWeek();
+  let visible=tasks.filter(t=>filter==='today'?t.due===today:filter==='open'?!t.done:filter==='done'?t.done:true);
+  visible.sort((a,b)=>(a.done-b.done)||(a.priority-b.priority)||((a.due||'9999').localeCompare(b.due||'9999')));
+  let list=document.getElementById('pcTaskList');
+  if(list)list.innerHTML=visible.length?visible.map(t=>`<div class="pc-task ${t.done?'done':''}"><input type="checkbox" ${t.done?'checked':''} aria-label="Complete ${esc(t.title)}" onchange="pcToggleTask('${t.id}')"><div class="pc-task-main"><div class="pc-task-title">${esc(t.title)}</div><div class="pc-task-meta">${esc(t.category)} · ${t.minutes} min · ${t.due?'Due '+esc(t.due):'No deadline'} · <span class="pc-priority">${['','High','Medium','Low'][t.priority]||'Medium'}</span></div></div><button class="btn alt" onclick="pcDeleteTask('${t.id}')">Delete</button></div>`).join(''):'<p class="muted">No tasks here yet. Add one small, clear action above.</p>';
+  let open=tasks.filter(t=>!t.done),doneToday=tasks.filter(t=>t.done&&t.completedAt===today).length,weekDone=tasks.filter(t=>t.done&&t.completedAt>=week).length;
+  const set=(id,v)=>{let e=document.getElementById(id);if(e)e.textContent=v;};
+  set('pcOpenCount',open.length);set('pcDoneCount',doneToday);set('pcWeekDone',weekDone);set('pcMinutes',open.reduce((a,t)=>a+(Number(t.minutes)||0),0)+'m');set('pcFilterCount',visible.length+' tasks');set('pcDate',new Date().toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric'}));
+ };
+ window.pcBuildPlan=function(){
+  let x=load(),minutes=Math.max(15,Math.min(600,Number(document.getElementById('pcAvailable').value)||120)),energy=document.getElementById('pcEnergy').value;
+  let tasks=x.tasks.filter(t=>!t.done).sort((a,b)=>(a.priority-b.priority)||((a.due||'9999').localeCompare(b.due||'9999')));
+  let cap=Math.floor(minutes*.8),selected=[],used=0;
+  for(let t of tasks){if(selected.length>=3)break;if(used+t.minutes<=cap){selected.push(t);used+=t.minutes;}}
+  let el=document.getElementById('pcPlanResult');
+  if(!selected.length){el.textContent='No open tasks fit this time budget. Add a small task or adjust your available time.';return;}
+  el.innerHTML='<b>Your realistic plan · '+energy+' energy</b><br>'+selected.map((t,i)=>`${i+1}. ${esc(t.title)} — ${t.minutes} min`).join('<br>')+`<br><br><b>${used} of ${minutes} minutes planned.</b> The remaining time is a buffer for breaks and unexpected work.`;
+ };
+ window.pcInit=function(){pcRender();};
+ const oldRender=window.render;
+ if(typeof oldRender==='function')window.render=function(){oldRender.apply(this,arguments);pcRender();};
+ document.addEventListener('DOMContentLoaded',pcRender);setTimeout(pcRender,0);
+})();
+
+</script>
+
+<script>
+
+/* Advanced Habit Tracker v26 — isolated data key; legacy habit data remains untouched. */
+(function(){
+ const KEY='a1000AdvancedHabits_v26';
+ const date=()=>new Date().toLocaleDateString('en-CA');
+ const parse=s=>{let [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d,12);};
+ const fmt=d=>new Date(d).toLocaleDateString('en-CA');
+ const escH=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function load(){try{let x=JSON.parse(localStorage.getItem(KEY)||'{}');if(!Array.isArray(x.habits))x.habits=[];if(!x.logs)x.logs={};return x;}catch(e){return {habits:[],logs:{}};}}
+ function save(x){localStorage.setItem(KEY,JSON.stringify(x));}
+ function scheduled(h,day){return h.days.includes(parse(day).getDay());}
+ function logFor(x,id,day){x.logs[day]=x.logs[day]||{};return x.logs[day][id]||'';}
+ function streak(x,h){let n=0,d=parse(date());for(let i=0;i<365;i++){let ds=fmt(d);if(!scheduled(h,ds)){d.setDate(d.getDate()-1);continue;}if(logFor(x,h.id,ds)){n++;d.setDate(d.getDate()-1);}else break;}return n;}
+ window.ahAdd=function(){
+  let name=document.getElementById('ahName').value.trim();if(!name){alert('Add a habit name first.');return;}
+  let days=[...document.querySelectorAll('#ahDays input:checked')].map(e=>Number(e.value));if(!days.length){alert('Choose at least one day.');return;}
+  let x=load();x.habits.push({id:'h'+Date.now()+Math.random().toString(36).slice(2,5),name,cue:document.getElementById('ahCue').value.trim(),tiny:document.getElementById('ahTiny').value.trim(),category:document.getElementById('ahCategory').value,difficulty:document.getElementById('ahDifficulty').value,days,created:date(),active:true});
+  save(x);['ahName','ahCue','ahTiny'].forEach(id=>document.getElementById(id).value='');ahRender();
+ };
+ window.ahLog=function(id,kind){let x=load();x.logs[date()]=x.logs[date()]||{};x.logs[date()][id]=kind;save(x);ahRender();};
+ window.ahToggleActive=function(id){let x=load(),h=x.habits.find(h=>h.id===id);if(h){h.active=!h.active;save(x);ahRender();}};
+ window.ahDelete=function(id){if(!confirm('Delete this habit and its history? Export your backup first if you may need it.'))return;let x=load();x.habits=x.habits.filter(h=>h.id!==id);Object.values(x.logs).forEach(day=>delete day[id]);save(x);ahRender();};
+ window.ahNote=function(id){let x=load(),h=x.habits.find(h=>h.id===id);if(!h)return;let note=prompt('Add a short note for this habit:',h.note||'');if(note!==null){h.note=note.slice(0,240);save(x);ahRender();}};
+ window.ahRender=function(){
+  let x=load(),active=x.habits.filter(h=>h.active),today=date(),due=active.filter(h=>scheduled(h,today)),done=due.filter(h=>!!logFor(x,h.id,today)).length;
+  const set=(id,v)=>{let e=document.getElementById(id);if(e)e.textContent=v;};
+  set('ahActive',active.length);set('ahToday',done+'/'+due.length);
+  let days=[];for(let i=6;i>=0;i--){let d=parse(today);d.setDate(d.getDate()-i);days.push(fmt(d));}
+  let total=0,possible=0;days.forEach(ds=>active.forEach(h=>{if(scheduled(h,ds)){possible++;if(logFor(x,h.id,ds))total++;}}));
+  let rate=possible?Math.round(total/possible*100):0;set('ahRate',rate+'%');
+  let todayList=document.getElementById('ahTodayList');
+  if(todayList)todayList.innerHTML=due.length?due.map(h=>{let v=logFor(x,h.id,today);return `<div class="ah-habit"><div class="ah-habit-title">${escH(h.name)}</div><div class="ah-meta">${escH(h.category)} · ${h.difficulty} · ${streak(x,h)} scheduled-day streak</div><div class="ah-actions">${v?`<span class="pill">✓ ${v==='full'?'Completed':'Minimum version completed'}</span>`:`<button class="btn" onclick="ahLog('${h.id}','full')">Complete</button><button class="btn alt" onclick="ahLog('${h.id}','tiny')">Do minimum</button>`}</div></div>`}).join(''):'<p class="muted">No habits scheduled today. Enjoy the breathing room or add a routine above.</p>';
+  let lib=document.getElementById('ahLibrary');
+  if(lib)lib.innerHTML=x.habits.length?x.habits.map(h=>`<div class="ah-habit"><div class="row"><div class="ah-habit-title">${escH(h.name)} ${h.active?'':'(paused)'}</div><span class="pill">${streak(x,h)} streak</span></div><div class="ah-meta">${escH(h.category)} · ${h.days.map(d=>['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d]).join(', ')} · Minimum: ${escH(h.tiny||'Not set')}</div>${h.cue?`<div class="ah-meta">After: ${escH(h.cue)}</div>`:''}${h.note?`<div class="ah-meta">Note: ${escH(h.note)}</div>`:''}<div class="ah-actions"><button class="btn alt" onclick="ahToggleActive('${h.id}')">${h.active?'Pause':'Resume'}</button><button class="btn alt" onclick="ahNote('${h.id}')">Add note</button><button class="btn alt" onclick="ahDelete('${h.id}')">Delete</button></div></div>`).join(''):'<p class="muted">No habits yet. Create one tiny routine to get started.</p>';
+  let heat=document.getElementById('ahHeatmap');if(heat){let cells=[];for(let i=27;i>=0;i--){let d=parse(today);d.setDate(d.getDate()-i);let ds=fmt(d),sched=active.filter(h=>scheduled(h,ds)),n=sched.filter(h=>logFor(x,h.id,ds)).length,p=sched.length? n/sched.length:0,cl=p===0?'':p<.5?'low':p<1?'mid':'high';cells.push(`<div class="ah-cell ${cl} ${ds===today?'today':''}" title="${ds}: ${n}/${sched.length} completed">${parse(ds).getDate()}</div>`);}heat.innerHTML=cells.join('');}
+  let insight=document.getElementById('ahInsights');if(insight){let best=active.map(h=>({h,n:streak(x,h)})).sort((a,b)=>b.n-a.n)[0];insight.innerHTML=`Last 7 days: <b>${total}/${possible}</b> scheduled habit check-ins completed (${rate}%). ${best?`Your longest current scheduled-day streak is <b>${best.n} days</b> for ${esc(best.h.name)}.`:'Add a habit to see your consistency insights.'} A missed day is information, not failure.`;}
+ };
+ const old=window.render;if(typeof old==='function')window.render=function(){old.apply(this,arguments);ahRender();};
+ document.addEventListener('DOMContentLoaded',ahRender);setTimeout(ahRender,0);
+})();
+
+</script>
+
+<script>
+
+/* My Life OS 2.0 — separate store; legacy lifeOS keys remain intact. */
+(function(){
+ const KEY='a1000LifeOS_v27';
+ const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const dims=['Physical','Intellectual','Career','Financial','Social','Purpose'];
+ const defaults={dimensions:{},dimensionHistory:[],money:[],milestones:[],reviews:[],direction:{}};
+ function load(){try{return {...defaults,...JSON.parse(localStorage.getItem(KEY)||'{}')};}catch(e){return {...defaults};}}
+ function save(x){localStorage.setItem(KEY,JSON.stringify(x));}
+ const date=()=>new Date().toLocaleDateString('en-CA');
+ window.life2Render=function(){
+  let x=load(),box=document.getElementById('life2Dimensions');
+  if(box)box.innerHTML=dims.map(d=>`<div class="life2-dim"><div class="row"><b>${d}</b><span id="life2v_${d}">${x.dimensions[d]??5}/10</span></div><input type="range" min="1" max="10" value="${x.dimensions[d]??5}" oninput="document.getElementById('life2v_${d}').textContent=this.value+'/10'" id="life2_${d}"><p class="muted" style="font-size:11px;margin:4px 0">How supported does this area feel?</p></div>`).join('');
+  let inc=x.money.filter(m=>m.type==='income').reduce((a,m)=>a+m.amount,0),exp=x.money.filter(m=>m.type==='expense').reduce((a,m)=>a+m.amount,0),sav=x.money.filter(m=>m.type==='saving').reduce((a,m)=>a+m.amount,0);
+  const set=(id,v)=>{let e=document.getElementById(id);if(e)e.textContent=v;};
+  set('life2Milestones',x.milestones.length);set('life2Saved','₹'+Math.round(sav).toLocaleString('en-IN'));set('life2Reviews',x.reviews.length+x.dimensionHistory.length);set('life2Income','₹'+Math.round(inc).toLocaleString('en-IN'));set('life2Expense','₹'+Math.round(exp).toLocaleString('en-IN'));set('life2Balance','₹'+Math.round(inc-exp).toLocaleString('en-IN'));
+  let ml=document.getElementById('life2MoneyList');if(ml)ml.innerHTML=x.money.slice(-5).reverse().map(m=>`<div class="life2-entry"><b>${esc(m.category||m.type)} · ₹${m.amount.toLocaleString('en-IN')}</b><div class="muted">${esc(m.type)} · ${m.date} ${esc(m.note)}</div></div>`).join('')||'<p class="muted">No transactions recorded.</p>';
+  let tl=document.getElementById('life2Timeline');if(tl)tl.innerHTML=x.milestones.slice().reverse().map(m=>`<div class="life2-entry"><b>${esc(m.title)}</b><div class="muted">${m.date} · ${esc(m.type)}</div><div>${esc(m.note)}</div></div>`).join('')||'<p class="muted">Your milestones will appear here.</p>';
+  let d=x.direction||{};['Direction','Stop','Continue','Support','Boundary'].forEach(k=>{let el=document.getElementById('life2'+k);if(el&&document.activeElement!==el)el.value=d[k.toLowerCase()]||'';});
+  let dv=document.getElementById('life2DirectionView');if(dv)dv.textContent=d.direction?`This month's focus: ${d.direction}`:'No monthly direction saved yet.';
+  let rh=document.getElementById('life2ReviewHistory');if(rh)rh.innerHTML=x.reviews.slice().reverse().slice(0,5).map(r=>`<div class="life2-entry"><b>Week of ${r.date}</b><div class="muted">Energy: ${esc(r.win)} · Drained by: ${esc(r.drain)}</div><div>Learned: ${esc(r.learn)}</div><b>Next: ${esc(r.next)}</b></div>`).join('')||'<p class="muted">Your weekly reviews will appear here.</p>';
+  let dh=document.getElementById('life2DimensionHistory');if(dh)dh.innerHTML=x.dimensionHistory.slice().reverse().slice(0,4).map(h=>`<div class="life2-entry"><b>${h.date}</b><div class="muted">${dims.map(d=>d+': '+h.values[d]+'/10').join(' · ')}</div></div>`).join('');
+ };
+ window.life2SaveDimensions=function(){let x=load(),values={};dims.forEach(d=>values[d]=Number(document.getElementById('life2_'+d).value));x.dimensions=values;x.dimensionHistory.push({date:date(),values});save(x);life2Render();};
+ window.life2AddMoney=function(){let amount=Number(document.getElementById('life2MoneyAmount').value);if(!(amount>0)){alert('Enter an amount greater than zero.');return;}let x=load();x.money.push({amount,type:document.getElementById('life2MoneyType').value,category:document.getElementById('life2MoneyCategory').value.trim(),note:document.getElementById('life2MoneyNote').value.trim(),date:date()});save(x);['life2MoneyAmount','life2MoneyCategory','life2MoneyNote'].forEach(id=>document.getElementById(id).value='');life2Render();};
+ window.life2AddMilestone=function(){let title=document.getElementById('life2MilestoneTitle').value.trim();if(!title){alert('Enter a milestone title.');return;}let x=load();x.milestones.push({title,type:document.getElementById('life2MilestoneType').value,note:document.getElementById('life2MilestoneNote').value.trim(),date:date()});save(x);['life2MilestoneTitle','life2MilestoneNote'].forEach(id=>document.getElementById(id).value='');life2Render();};
+ window.life2SaveDirection=function(){let x=load();x.direction={direction:document.getElementById('life2Direction').value.trim(),stop:document.getElementById('life2Stop').value.trim(),continue:document.getElementById('life2Continue').value.trim(),support:document.getElementById('life2Support').value.trim(),boundary:document.getElementById('life2Boundary').value.trim()};save(x);life2Render();};
+ window.life2SaveReview=function(){let x=load();x.reviews.push({date:date(),win:document.getElementById('life2WeekWin').value.trim(),drain:document.getElementById('life2WeekDrain').value.trim(),learn:document.getElementById('life2WeekLearn').value.trim(),next:document.getElementById('life2WeekNext').value.trim()});save(x);['life2WeekWin','life2WeekDrain','life2WeekLearn','life2WeekNext'].forEach(id=>document.getElementById(id).value='');life2Render();};
+ const old=window.render;if(typeof old==='function')window.render=function(){old.apply(this,arguments);life2Render();};
+ document.addEventListener('DOMContentLoaded',life2Render);setTimeout(life2Render,0);
+})();
+
+</script>
+
+<script>
+
+/* Campus Arcade 2.0 — self-contained games and separate local progress. */
+(function(){
+const KEY='a1000CampusArcade_v28';
+const blank={points:0,plays:0,correct:0,best:{},badges:[],history:[],builds:[]};
+const read=()=>{try{return {...blank,...JSON.parse(localStorage.getItem(KEY)||'{}')};}catch(e){return {...blank};}};
+const write=x=>localStorage.setItem(KEY,JSON.stringify(x));
+const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let active='brain',round=0,answered=false,brainSet=[],circuitSet=[],campusSet=[],wordSet=[],wordCurrent=null;
+const brainBank=[
+['Which number comes next: 2, 4, 8, 16, …?',['18','24','32','36'],2,'Each number is doubled.'],
+['A notebook and pen cost ₹110. The notebook costs ₹100 more than the pen. Pen cost?',['₹5','₹10','₹15','₹20'],0,'Let pen = x. Then x + (x + 100) = 110.'],
+['Which is the odd one out?',['Triangle','Square','Circle','Cube'],3,'Cube is a 3D solid; the others are 2D shapes.'],
+['If all EIE students study sensors, and Mira is an EIE student, what follows?',['Mira studies sensors','Mira teaches sensors','All sensor students are EIE','Cannot say'],0,'Apply the statement directly.'],
+['You face north, turn right, then right again. Which direction now?',['East','West','South','North'],2,'North → East → South.'],
+['Which is the best first step for a large task?',['Avoid it','Define the next action','Wait for motivation','Do everything together'],1,'A clear next action makes starting easier.'],
+['A machine makes 3 parts in 3 minutes. At the same rate, 6 machines make 6 parts in…?',['1 minute','3 minutes','6 minutes','9 minutes'],1,'Each machine makes one part in three minutes.']
+];
+const circuitBank=[
+['A 10 Ω resistor has 2 A flowing through it. Voltage?',['5 V','10 V','20 V','40 V'],2,'Ohm’s law: V = IR = 2 × 10 = 20 V.'],
+['Which sensor is commonly used to measure temperature?',['LDR','RTD','Strain gauge','Load cell'],1,'An RTD changes resistance with temperature.'],
+['A 4–20 mA signal at 12 mA represents what fraction of span?',['25%','40%','50%','75%'],2,'(12 − 4) / (20 − 4) = 50%.'],
+['What does a PLC primarily do?',['Store fuel','Control industrial processes','Generate solar power','Measure only temperature'],1,'A PLC reads inputs, executes logic and controls outputs.'],
+['Which device converts AC to DC?',['Rectifier','Inverter','Transformer only','Oscillator'],0,'A rectifier converts alternating current to direct current.'],
+['A thermocouple works on which effect?',['Hall effect','Seebeck effect','Piezoelectric effect','Photoelectric effect'],1,'A temperature difference generates a thermoelectric voltage.'],
+['What is the unit of capacitance?',['Ohm','Henry','Farad','Tesla'],2,'Capacitance is measured in farads.']
+];
+const campusBank=[
+['Your lab partner is confused before a practical. What do you do?',['Explain the first step together','Ignore it and rush ahead','Take over their entire work'],0,'You help them understand while still sharing responsibility.'],
+['A club event clashes with your study plan. What is a balanced choice?',[['Check deadlines and choose a realistic time','Cancel all study for the week','Attend everything'],0,'You protect the important deadline and still make room for campus life.']],
+['Your project prototype fails during a demo. Your next move?',[['Record the failure and test one cause','Hide the prototype','Give up immediately'],0,'A failed test is useful evidence for the next iteration.']],
+['A new student is sitting alone at lunch. What might you do?',[['Invite them to join if they seem comfortable','Force them to talk','Make fun of them'],0,'A low-pressure invitation can make someone feel welcome.']],
+['You have a free afternoon after a tiring week. Choose a reset. ',[['Rest, then do one small priority','Fill every minute with work','Feel guilty and do nothing'],0,'Rest is part of a sustainable routine.']],
+['A teammate has a different idea. What helps?',[['Compare both ideas with a small test','Argue until they agree','Ignore their suggestion'],0,'A small experiment can settle a design question fairly.']]
+];
+const words=[['INSTRUMENT','A device used to measure a physical quantity.'],['SENSOR','Detects a physical change.'],['CIRCUIT','A closed path for current flow.'],['FOCUS','Directing attention to one task.'],['PROTOTYPE','An early model used for testing.'],['CAMPUS','The grounds of a college.'],['KAIZEN','A philosophy of continuous small improvements.'],['PROJECT','A planned piece of work with an outcome.']];
+const prompts=['Design a low-cost solution to reduce water waste in a hostel.','Help a small shop track daily electricity use.','Make laboratory safety instructions easier to understand.','Create a simple device that helps elderly people at home.','Reduce food waste in a college canteen.','Build a low-cost reminder system for a shared workspace.'];
+function shuffle(a){let b=a.slice();for(let i=b.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;}
+function record(game,score,correct=0){let x=read();x.points+=score;x.plays++;x.correct+=correct;x.best[game]=Math.max(x.best[game]||0,score);x.history.push({game,score,date:new Date().toLocaleDateString()});x.history=x.history.slice(-30);let badges=[['First Play',x.plays>=1],['Curious Mind',x.correct>=10],['Arcade Explorer',new Set(x.history.map(h=>h.game)).size>=5],['Idea Maker',x.builds.length>=1],['Brain Builder',x.best.brain>=30],['Circuit Solver',x.best.circuit>=30]];badges.forEach(([b,ok])=>{if(ok&&!x.badges.includes(b))x.badges.push(b);});write(x);renderStats();}
+function renderStats(){let x=read(),set=(id,v)=>{let e=document.getElementById(id);if(e)e.textContent=v;};set('v28ArcadePoints',x.points);set('v28ArcadePlays',x.plays);set('v28ArcadeBadges',x.badges.length);set('v28TotalCorrect',x.correct);set('v28Builds',x.builds.length);let fav=Object.entries(x.best).sort((a,b)=>b[1]-a[1])[0];set('v28BestGame',fav?fav[0]:'—');let b=document.getElementById('v28Badges');if(b)b.innerHTML=x.badges.map(z=>`<span class="pill">🏅 ${esc(z)}</span>`).join(' ')||'<span class="muted">Play a few games to earn your first badge.</span>';let h=document.getElementById('v28ArcadeHistory');if(h)h.innerHTML=x.history.slice().reverse().slice(0,8).map(a=>`<div class="life2-entry"><b>${esc(a.game)} · ${a.score} points</b><div class="muted">${esc(a.date)}</div></div>`).join('')||'<p class="muted">Your completed rounds will appear here.</p>';let ph=document.getElementById('v28ProjectHistory');if(ph)ph.innerHTML=x.builds.slice().reverse().slice(0,3).map(a=>`<div class="life2-entry"><b>${esc(a.prompt)}</b><div class="muted">${esc(a.date)}</div><p>${esc(a.solution)}</p></div>`).join('');}
+window.v28Show=function(id){active=id;document.querySelectorAll('.v28-game').forEach(e=>e.hidden=e.id!=='v28'+id);document.querySelectorAll('.v28-tab').forEach((e,i)=>e.classList.toggle('active',['brain','circuit','campus','word','project'][i]===id));};
+function quizStart(type){round=0;answered=false;if(type==='brain')brainSet=shuffle(brainBank).slice(0,5);if(type==='circuit')circuitSet=shuffle(circuitBank).slice(0,5);if(type==='campus')campusSet=shuffle(campusBank).slice(0,5);renderQuestion(type);}
+function renderQuestion(type){let arr=type==='brain'?brainSet:type==='circuit'?circuitSet:campusSet, item=arr[round],prefix=type==='brain'?'Brain':type==='circuit'?'Circuit':'Campus';if(!item)return;let q=document.getElementById('v28'+prefix+'Q'),c=document.getElementById('v28'+prefix+'Choices'),f=document.getElementById('v28'+prefix+'Feedback'),pr=document.getElementById('v28'+prefix+'Progress')||document.getElementById('v28CampusDay'),n=document.getElementById('v28'+prefix+'Next');q.textContent=item[0];pr.textContent=(type==='campus'?'Campus moment ':'Question ')+(round+1)+' / 5';f.textContent='Choose your answer.';c.innerHTML='';let choices=item[1];choices.forEach((v,i)=>{let b=document.createElement('button');b.className='v28-answer';b.textContent=v;b.onclick=()=>answer(type,i,b);c.appendChild(b);});n.textContent='Next';n.disabled=true;answered=false;}
+function answer(type,i,btn){if(answered)return;answered=true;let arr=type==='brain'?brainSet:type==='circuit'?circuitSet:campusSet,item=arr[round],correct=i===item[2][0]|| (type!=='campus'&&i===item[2]);let choices=document.querySelectorAll('#v28'+(type==='brain'?'Brain':type==='circuit'?'Circuit':'Campus')+'Choices .v28-answer');choices.forEach((b,j)=>{b.disabled=true;if(j===item[2])b.classList.add('correct');});let fb=document.getElementById('v28'+(type==='brain'?'Brain':type==='circuit'?'Circuit':'Campus')+'Feedback');if(type==='campus'){fb.textContent=(correct?'Good choice! ':'That is one way to learn. ')+item[3];record('Campus Life',5,0);}else{fb.textContent=(correct?'Correct! ':'Good try. ')+item[3];if(correct)record(type==='brain'?'Brain Arena':'Circuit Lab',type==='brain'?10:15,1);else record(type==='brain'?'Brain Arena':'Circuit Lab',0,0);}document.getElementById('v28'+(type==='brain'?'Brain':type==='circuit'?'Circuit':'Campus')+'Next').disabled=false;}
+function next(type){let arr=type==='brain'?brainSet:type==='circuit'?circuitSet:campusSet;if(!arr.length){quizStart(type);return;}if(!answered)return;if(round<4){round++;renderQuestion(type);}else{quizStart(type);}}
+window.v28BrainNext=()=>next('brain');window.v28CircuitNext=()=>next('circuit');window.v28CampusNext=()=>next('campus');
+function wordStart(){wordSet=shuffle(words).slice(0,5);round=0;wordRender();}
+function wordRender(){wordCurrent=wordSet[round];let scrambled=wordCurrent[0].split('');if(scrambled.length>2){for(let i=0;i<4;i++){let a=Math.floor(Math.random()*scrambled.length),b=Math.floor(Math.random()*scrambled.length);[scrambled[a],scrambled[b]]=[scrambled[b],scrambled[a]];}if(scrambled.join('')===wordCurrent[0])scrambled.reverse();}document.getElementById('v28Scramble').textContent=scrambled.join(' ');document.getElementById('v28WordHint').textContent='Hint: '+wordCurrent[1];document.getElementById('v28WordRound').textContent='Round '+(round+1)+' / 5';document.getElementById('v28WordFeedback').textContent='Unscramble the letters.';document.getElementById('v28WordInput').value='';document.getElementById('v28WordInput').disabled=false;let b=document.getElementById('v28WordNext');b.textContent='Check word';b.onclick=wordCheck;}
+function wordCheck(){let val=document.getElementById('v28WordInput').value.trim().toUpperCase(),fb=document.getElementById('v28WordFeedback');if(!wordCurrent){wordStart();return;}if(val!==wordCurrent[0]){fb.textContent='Not quite—try again. Look at the hint.';return;}fb.textContent='Nice! '+wordCurrent[0]+' is correct.';document.getElementById('v28WordInput').disabled=true;record('Word Builder',10,1);let b=document.getElementById('v28WordNext');b.textContent=round===4?'Finish round':'Next word';b.onclick=wordAdvance;}
+function wordAdvance(){if(round===4){wordCurrent=null;document.getElementById('v28Scramble').textContent='ROUND COMPLETE';document.getElementById('v28WordFeedback').textContent='Great work. Start another round whenever you like.';this.textContent='Start new round';this.onclick=wordStart;}else{round++;wordRender();}}
+window.v28WordNext=wordStart;
+window.v28ProjectNew=function(){document.getElementById('v28ProjectPrompt').textContent=prompts[Math.floor(Math.random()*prompts.length)];['v28ProjectUser','v28ProjectSolution','v28ProjectParts','v28ProjectTest'].forEach(id=>document.getElementById(id).value='');};
+window.v28ProjectSave=function(){let ids=['v28ProjectUser','v28ProjectSolution','v28ProjectParts','v28ProjectTest'],vals=ids.map(id=>document.getElementById(id).value.trim());if(vals.some(v=>!v)){alert('Complete all four steps before saving your build sprint.');return;}let x=read();x.builds.push({prompt:document.getElementById('v28ProjectPrompt').textContent,user:vals[0],solution:vals[1],parts:vals[2],test:vals[3],date:new Date().toLocaleDateString()});write(x);record('Project Builder',25,0);renderStats();ids.forEach(id=>document.getElementById(id).value='');document.getElementById('v28ProjectPrompt').textContent='Build sprint saved! Try another challenge when you are ready.';};
+window.v28ArcadeRender=renderStats;
+document.addEventListener('DOMContentLoaded',()=>{renderStats();window.v28ProjectNew();});setTimeout(renderStats,0);
+})();
+
+</script>
+
+
+<script>
+/* v29: 12-week campaign planning layer; extends the existing campaign object. */
+(function(){
+ const phases=[
+  {name:'Phase 1 · Foundation',weeks:'Weeks 1–4',desc:'Understand your starting point, close basic gaps and build a repeatable routine.'},
+  {name:'Phase 2 · Build',weeks:'Weeks 5–8',desc:'Create tangible work, practice consistently and collect evidence of progress.'},
+  {name:'Phase 3 · Prove',weeks:'Weeks 9–12',desc:'Test your ability, finish the outcome and prepare the next campaign.'}
+ ];
+ const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'" :'&#39;'}[c]));
+ function campaign(){if(typeof V16==='undefined')return null;V16.campaign=V16.campaign||{goal:'',outcome:'',start:todayISO(),actions:[]};V16.campaign.actions=V16.campaign.actions||[];V16.campaign.v29=V16.campaign.v29||{baseline:'',target:'',hours:5,why:'',reviews:[]};return V16.campaign;}
+ function weekNo(c){return Math.max(1,Math.min(12,Math.floor((Date.now()-new Date((c.start||todayISO())+'T12:00:00'))/604800000)+1));}
+ function save(){v16Save();}
+ window.c29SaveBlueprint=function(){let c=campaign();if(!c)return;let v=c.v29;v.baseline=document.getElementById('c29Baseline').value.trim();v.target=document.getElementById('c29Target').value.trim();v.hours=Math.max(1,Math.min(60,Number(document.getElementById('c29Hours').value)||5));v.why=document.getElementById('c29Why').value.trim();save();render();};
+ window.c29AddAction=function(){let c=campaign(),text=document.getElementById('c29Action').value.trim();if(!text){notify('Write one specific action first.');return;}let w=weekNo(c),same=c.actions.filter(a=>a.week===w&&!a.done).length;if(same>=3){notify('Your weekly Big 3 is full. Finish or review an action before adding another.');return;}c.actions.push({text,done:false,week:w,priority:Number(document.getElementById('c29Priority').value),evidence:document.getElementById('c29Evidence').value.trim(),created:todayISO()});document.getElementById('c29Action').value='';document.getElementById('c29Evidence').value='';save();render();};
+ window.c29Toggle=function(i,checked){let c=campaign();if(!c||!c.actions[i])return;c.actions[i].done=checked;c.actions[i].completedAt=checked?todayISO():'';save();render();};
+ window.c29SaveReview=function(){let c=campaign(),v=c.v29,week=weekNo(c);let r={week,date:todayISO(),win:document.getElementById('c29ReviewWin').value.trim(),block:document.getElementById('c29ReviewBlock').value.trim(),change:document.getElementById('c29ReviewChange').value.trim(),confidence:Number(document.getElementById('c29Confidence').value)};if(!r.win&&!r.block&&!r.change){notify('Add at least one reflection before saving.');return;}v.reviews.push(r);['c29ReviewWin','c29ReviewBlock','c29ReviewChange'].forEach(id=>document.getElementById(id).value='');save();render();notify('Weekly campaign review saved.');};
+ function render(){let c=campaign();if(!c)return;let v=c.v29,w=weekNo(c),ids=['c29Baseline','c29Target','c29Hours','c29Why'],vals=[v.baseline,v.target,v.hours,v.why];ids.forEach((id,i)=>{let e=document.getElementById(id);if(e&&document.activeElement!==e)e.value=vals[i]??'';});
+ let bp=document.getElementById('c29BlueprintView');if(bp)bp.innerHTML=c.goal?`<b>${esc(c.goal)}</b><p>Outcome: ${esc(c.outcome)}</p><p>Starting point: ${esc(v.baseline||'Not set')} → Target: ${esc(v.target||'Not set')}</p><p>Reason: ${esc(v.why||'Add your reason')}</p>`:'Save your main campaign goal above to start.';
+ let road=document.getElementById('c29Roadmap');if(road)road.innerHTML=phases.map((p,i)=>`<div class="c29-phase"><b>${p.name}</b><small>${p.weeks}</small><p>${p.desc}</p><div class="muted">${i===0?'Weeks 1–4: clarify and prepare':i===1?'Weeks 5–8: practice and produce':'Weeks 9–12: test and finish'}</div></div>`).join('');
+ let now=c.actions.filter(a=>a.week===w),list=document.getElementById('c29WeeklyActions');if(list)list.innerHTML=now.length?now.map(a=>{let i=c.actions.indexOf(a);return `<div class="c29-action"><label><input type="checkbox" ${a.done?'checked':''} onchange="c29Toggle(${i},this.checked)"><span><b>${esc(a.text)}</b><small>Priority ${a.priority||2}${a.evidence?' · Evidence: '+esc(a.evidence):''}${a.done?' · Completed':''}</small></span></label></div>`;}).join(''):'<p class="muted">No actions for this week yet. Add up to three clear commitments.</p>';
+ let cap=document.getElementById('c29Capacity');if(cap)cap.textContent=`Available time: ${v.hours||5} hours/week. Keep planned actions small enough to fit around classes, exams, rest and existing responsibilities.`;
+ let done=c.actions.filter(a=>a.done).length,total=c.actions.length,health=total===0?'Plan needed':done/total>=.7?'On track':done/total>=.35?'Adjust gently':'Needs a smaller plan';
+ const set=(id,val)=>{let e=document.getElementById(id);if(e)e.textContent=val;};set('c29Done',done);set('c29Total',total);set('c29ReviewCount',v.reviews.length);set('c29Health',health);
+ let rh=document.getElementById('c29ReviewHistory');if(rh)rh.innerHTML=v.reviews.slice().reverse().slice(0,6).map(r=>`<div class="c29-action"><b>Week ${r.week} · ${r.date} · Confidence ${r.confidence}/5</b><small>Win: ${esc(r.win)} · Block: ${esc(r.block)} · Next adjustment: ${esc(r.change)}</small></div>`).join('')||'<p class="muted">Your weekly reviews will appear here.</p>';
+ let ev=document.getElementById('c29EvidenceLog');if(ev)ev.innerHTML=c.actions.filter(a=>a.done).slice().reverse().slice(0,8).map(a=>`<div class="c29-week"><b>Week ${a.week}</b><span>${esc(a.text)}</span><small>${esc(a.evidence||'Completed')}</small></div>`).join('')||'<p class="muted">Complete actions to build your evidence log.</p>';
+ }
+ const old=window.v16RenderCampaign;if(typeof old==='function')window.v16RenderCampaign=function(){old();render();};
+ document.addEventListener('DOMContentLoaded',render);setTimeout(render,50);
+})();
+</script>
+

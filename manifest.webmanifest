@@ -1,12 +1,12 @@
 {
   "name": "A COLLEGE OF 1000 DAYS",
   "short_name": "1000 Days",
-  "description": "One thousand days of real-life growth, campus friendships, and story chapters.",
+  "description": "A standalone, offline-first student productivity RPG with habits, projects, reflection and a campus novel.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f4f1eb",
-  "theme_color": "#171827",
+  "theme_color": "#263d36",
   "icons": [
     {
       "src": "icon-192.png",
@@ -20,5 +20,12 @@
       "type": "image/png",
       "purpose": "any"
     }
-  ]
+  ],
+  "orientation": "portrait-primary",
+  "categories": [
+    "education",
+    "productivity",
+    "lifestyle"
+  ],
+  "prefer_related_applications": false
 }
